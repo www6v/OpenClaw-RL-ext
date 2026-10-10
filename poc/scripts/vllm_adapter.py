@@ -108,7 +108,7 @@ async def chat_completions(request: Request):
     if VLLM_MODEL_ID and body.get("model"):
         body["model"] = VLLM_MODEL_ID
     try:
-        async with httpx.AsyncClient(timeout=300) as client:
+        async with httpx.AsyncClient(timeout=300, trust_env=False) as client:
             r = await client.post(f"{VLLM_URL}/v1/chat/completions", json=body)
             try:
                 return JSONResponse(status_code=r.status_code, content=r.json())
@@ -137,7 +137,7 @@ async def generate(request: Request):
     }
 
     try:
-        async with httpx.AsyncClient(timeout=120) as client:
+        async with httpx.AsyncClient(timeout=120, trust_env=False) as client:
             r = await client.post(f"{VLLM_URL}/v1/completions", json=vllm_body)
             result = r.json()
             # 转换回 sglang /generate 格式
@@ -178,7 +178,7 @@ if __name__ == "__main__":
     # 自动检测 vLLM 注册的模型名
     try:
         import httpx as _httpx
-        _r = _httpx.get(f"{VLLM_URL}/v1/models", timeout=10)
+        _r = _httpx.get(f"{VLLM_URL}/v1/models", timeout=10, proxies={})
         _models = _r.json().get("data", [])
         if _models:
             VLLM_MODEL_ID = _models[0]["id"]
