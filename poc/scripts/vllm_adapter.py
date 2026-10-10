@@ -37,8 +37,8 @@ VLLM_MODEL_ID = ""  # vLLM 注册的模型名
 async def health():
     """Slime 检查 /health_generate, vLLM 只有 /health — 两个都支持"""
     try:
-        async with httpx.AsyncClient() as client:
-            r = await client.get(f"{VLLM_URL}/health", timeout=10)
+        async with httpx.AsyncClient(timeout=10, trust_env=False) as client:
+            r = await client.get(f"{VLLM_URL}/health")
             if r.status_code == 200:
                 return {"status": "ok"}
     except Exception as e:
@@ -81,7 +81,7 @@ async def release_weights_update_group(request: Request):
 async def get_server_info():
     """返回 Slime 需要的 server info 格式"""
     try:
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(trust_env=False) as client:
             r = await client.get(f"{VLLM_URL}/v1/models", timeout=10)
             if r.status_code == 200:
                 models = r.json().get("data", [])
