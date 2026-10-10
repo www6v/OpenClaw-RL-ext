@@ -1,14 +1,2473 @@
-INFO:httpx:HTTP Request: GET http://localhost:30000/v1/models "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
 INFO:vllm_adapter:vLLM model detected: /home/wangwei/models/Qwen3-1.7B
-INFO:vllm_adapter:vLLM adapter: proxy 0.0.0.0:30001 -> http://localhost:30000
+INFO:vllm_adapter:vLLM adapter: proxy 0.0.0.0:30001 -> http://localhost:30010
 INFO:vllm_adapter:Model rewrite: any model name -> '/home/wangwei/models/Qwen3-1.7B'
-INFO:     Started server process [1689467]
+INFO:     Started server process [36734]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:30001 (Press CTRL+C to quit)
-INFO:httpx:HTTP Request: GET http://localhost:30000/health "HTTP/1.1 200 OK"
-INFO:     127.0.0.1:59840 - "GET /health HTTP/1.1" 200 OK
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [1689467]
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41116 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42128 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42128 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42138 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58220 - "GET /health HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50244 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50274 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50274 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50274 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50274 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33680 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33694 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33694 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33694 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33694 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39104 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36028 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35614 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35468 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53194 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50788 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45978 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55234 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48974 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46690 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56202 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56202 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56212 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60350 - "GET /health HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50032 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50062 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50062 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50062 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50062 - "GET /get_model_info HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50564 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50582 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50582 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50582 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50582 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50564 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50594 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50564 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50606 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50626 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50620 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51864 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50590 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50590 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50594 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50610 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50608 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50590 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50590 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50614 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50640 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50630 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50590 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50590 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50668 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50678 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50652 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55142 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57834 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41838 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47286 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55282 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44618 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44080 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60656 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47076 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42474 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43446 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37678 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52422 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42902 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33610 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42854 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58830 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35586 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53404 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46840 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49072 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47186 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46708 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39516 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50618 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33806 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45356 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52082 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56282 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34414 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57540 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39110 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35990 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54666 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42248 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44518 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53364 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57168 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34644 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49356 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59898 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42192 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37120 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57310 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49722 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37050 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57636 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49538 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33302 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57174 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45420 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41760 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42348 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36986 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36508 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47584 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49642 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39458 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42250 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48740 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33844 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38310 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58682 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40134 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54036 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51420 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55220 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39438 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34114 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52682 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47150 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39642 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37084 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33428 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54942 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59730 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48658 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41286 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50096 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34970 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53406 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35678 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56210 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42672 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54208 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43470 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43790 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44884 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36986 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35666 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48976 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53780 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50886 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54084 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33120 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56934 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43682 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57530 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48446 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42246 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50244 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47444 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38300 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33740 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51784 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38412 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34284 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37148 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44798 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35498 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60482 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38218 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49778 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36744 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49512 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46322 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33228 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43814 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37180 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53544 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52266 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43020 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53282 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53674 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54506 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48834 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48622 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47570 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42226 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37244 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51144 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39800 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58102 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38042 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38042 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38042 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38042 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43564 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50006 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50006 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50006 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50006 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56712 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35272 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35272 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35272 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35272 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41596 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35572 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39708 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46184 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46184 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46204 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46194 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46216 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46218 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46184 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46184 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60590 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60598 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60602 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46184 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53920 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39932 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39932 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56848 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56866 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56850 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39932 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39932 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56894 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56892 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56876 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39932 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39932 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40746 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40732 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40750 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39932 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39932 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37446 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37430 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37444 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57754 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48266 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46600 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46614 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46622 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46652 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46654 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46636 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55236 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55228 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55248 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55264 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55274 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55260 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52886 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52894 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52892 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52928 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52914 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52900 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47102 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47088 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47116 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47096 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40390 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40404 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40378 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40422 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40408 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40426 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43796 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43774 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43786 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43812 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43836 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43820 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56026 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53926 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53934 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53948 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:32990 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36814 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40520 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57278 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55118 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55118 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55124 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52056 - "GET /health HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52060 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52088 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52088 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52088 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52088 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52094 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49772 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51580 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57952 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57298 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57298 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57298 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57298 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57298 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57298 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57298 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57298 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34704 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34708 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34704 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34704 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34704 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34704 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34704 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34704 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34704 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49758 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49758 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49758 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49758 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49758 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49758 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49758 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49758 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58204 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52550 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52550 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52550 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52550 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52550 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52550 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52550 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52550 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39630 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39630 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39630 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39630 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43828 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39630 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39630 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39630 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39630 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44626 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42374 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42374 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42380 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34564 - "GET /health HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37988 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38012 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38012 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38012 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38012 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38658 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33750 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33750 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33762 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33756 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33776 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33750 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33750 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51524 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51534 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51518 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33750 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33750 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:32802 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:32798 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:32814 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33750 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33750 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50002 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49986 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49996 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50010 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58200 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58216 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58216 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38870 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38858 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38842 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58216 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58216 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38886 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38876 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38878 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58216 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58216 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47392 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47380 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47366 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58216 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58216 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47408 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47416 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47400 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59456 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59456 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59496 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59470 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59486 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59456 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59456 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50278 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50270 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50254 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59456 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50290 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59456 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50312 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50298 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50302 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59456 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59456 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48386 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48390 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48404 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36536 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36536 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36566 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36552 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36582 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36536 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36536 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53434 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53450 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53440 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36536 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36536 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53478 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53488 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53466 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36536 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36536 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47272 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47278 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47288 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53306 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34606 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34606 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34612 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34622 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34632 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34606 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34606 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50638 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50650 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50640 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34606 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34606 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39710 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39708 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39712 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34606 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34606 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39732 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39734 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39726 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45870 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45972 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57206 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55790 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42740 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42740 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42752 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57966 - "GET /health HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56830 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56868 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56868 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56868 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56868 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53528 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53538 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53538 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53556 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53540 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53572 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53538 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53538 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52656 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52648 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52666 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53538 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53538 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52682 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52706 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52698 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53538 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53538 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50042 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50048 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50028 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55334 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55334 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55360 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55350 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55338 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55334 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55334 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55648 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55628 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55634 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55334 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55334 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42578 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42570 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42562 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55334 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55334 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42588 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42612 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42604 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52308 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52308 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45348 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45356 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45336 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52308 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52308 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45366 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45374 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45368 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52308 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52308 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46882 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46892 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46878 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52308 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52308 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46896 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46898 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46900 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52584 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52584 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52614 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52594 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52608 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52584 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52584 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52626 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52650 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52640 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52584 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52584 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41538 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41550 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41528 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52584 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52584 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:32784 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:32776 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60992 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:32774 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58868 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58868 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58890 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58894 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58878 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58868 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58868 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36834 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36842 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36824 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58868 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58868 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36854 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36860 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36846 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58868 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58868 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47500 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47512 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47520 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40238 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40238 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40270 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40268 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40254 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40238 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40238 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59632 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59622 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59624 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40238 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40238 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58648 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59648 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59668 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59654 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40238 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40238 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58674 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58654 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58664 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40990 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40990 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38584 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38580 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38588 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40990 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40990 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38608 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38592 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38612 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40990 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40990 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53876 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53864 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53870 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40990 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40990 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53886 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53882 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53878 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37200 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37200 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37218 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37222 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37206 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37200 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37200 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37242 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37232 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37224 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37876 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37200 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37200 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37890 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37880 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37888 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37200 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37200 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52670 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52666 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52664 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56482 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56482 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56504 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56490 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56500 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56482 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56482 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50064 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50050 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50048 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56482 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56482 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50066 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50078 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50072 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56482 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56482 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44348 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44332 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44340 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43764 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43764 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43774 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43788 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43786 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43764 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40918 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43764 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40954 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40930 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40938 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43764 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43764 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40976 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40982 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40964 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43764 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43764 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42804 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42796 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42810 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55074 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55090 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55078 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55116 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55126 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55100 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44778 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44766 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44790 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44820 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44804 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44834 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51974 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51306 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51974 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51324 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51316 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51340 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51974 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51974 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51356 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51368 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51366 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51974 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51974 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40404 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40406 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40394 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51974 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51974 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40430 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40420 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40438 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50658 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50658 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50684 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50678 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50662 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50658 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50658 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52492 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52496 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52476 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50658 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50658 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52504 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52514 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52506 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50658 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50658 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50184 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50190 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50192 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59366 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59374 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59374 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59382 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59376 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59388 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59374 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59374 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50998 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50982 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50980 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59374 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59374 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51006 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51022 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51000 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59374 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59374 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43294 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43310 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43290 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39796 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39796 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39816 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39814 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39810 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39796 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39796 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38998 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39012 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39006 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39796 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39796 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37864 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37846 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37850 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39796 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39796 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37880 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37882 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37894 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39928 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49602 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51058 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58186 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35962 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42822 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42880 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46696 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47448 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46052 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36450 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58850 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36266 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50016 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47544 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47428 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36186 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60244 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57488 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54526 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42652 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36914 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44640 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33976 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45380 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54384 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57238 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54256 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47762 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57848 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50846 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46036 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45878 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38742 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49162 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39282 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44322 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44426 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60974 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59818 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37368 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45452 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58926 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57112 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54224 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58362 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40440 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56546 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:32864 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41262 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33238 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34480 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40194 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51086 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50646 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46472 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46542 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41628 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43120 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46822 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42084 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56132 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51774 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59090 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49340 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53392 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60846 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33612 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52140 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52752 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48500 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57038 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59384 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43868 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50238 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46364 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44720 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47886 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39838 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58720 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56356 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58212 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57130 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57130 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57138 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36590 - "GET /health HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54938 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54960 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54960 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54960 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54960 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42902 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43138 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55426 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58992 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36706 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38860 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54090 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36188 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49006 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35642 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59324 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42066 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36960 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55202 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49274 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59630 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52694 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52032 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57434 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45570 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36410 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44338 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33152 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49334 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49344 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43092 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46828 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33978 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33978 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33982 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56406 - "GET /health HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46562 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46586 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46586 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46586 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46586 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37436 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46074 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36690 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35186 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53774 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46564 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59390 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58002 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53566 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43876 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33020 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58050 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58050 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58064 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53170 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54726 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54726 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54738 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57840 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51836 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51836 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51842 - "GET /get_server_info HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51846 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51870 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51870 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51870 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51870 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48074 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38206 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52242 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44486 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56854 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55450 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40434 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40434 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40446 - "GET /get_server_info HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40454 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40468 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40468 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40468 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:40468 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48450 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41280 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45492 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57724 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56020 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58114 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48094 - "GET /generate HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:48098 - "GET / HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48108 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41428 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59012 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59012 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59028 - "GET /get_server_info HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59036 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59070 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59070 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59070 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59070 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35674 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55598 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37984 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46678 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:32838 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43928 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56836 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39328 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47904 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59764 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35108 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35108 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35122 - "GET /get_server_info HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35138 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35162 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:35162 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35162 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35162 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53432 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50244 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50244 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50244 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50248 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50250 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50264 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50244 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50244 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50244 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50270 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50272 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50244 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50268 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50244 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50300 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50278 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50294 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50314 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50306 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50328 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:43630 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:39764 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33676 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46342 - "GET /health_generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46342 - "GET /flush_cache HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46352 - "GET /get_server_info HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46364 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46376 - "GET /server_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/v1/models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46376 - "GET /get_server_info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46376 - "GET /model_info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46376 - "GET /get_model_info HTTP/1.1" 404 Not Found
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51472 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46084 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46084 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46084 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46084 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46090 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46084 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46102 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46096 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46084 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46118 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46132 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46104 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46084 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46084 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46156 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46166 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46146 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46184 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46180 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46186 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51520 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41910 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37120 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37118 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37116 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37124 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37144 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37138 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37148 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37162 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37176 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56874 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56920 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56876 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56866 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56890 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56906 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56886 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56922 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56942 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56936 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56948 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56960 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56962 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56978 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56968 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56966 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56992 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56982 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57004 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57010 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57012 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57006 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57026 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57042 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57018 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57054 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57052 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:30010/v1/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57068 - "POST /generate HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54888 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53252 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51534 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52640 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57688 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58914 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51834 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42500 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44594 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:46228 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45246 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33794 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58200 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33708 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49834 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59000 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42762 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:38018 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36154 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44880 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37562 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52176 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56758 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48456 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37792 - "GET /health HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://localhost:30010/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44274 - "GET /health HTTP/1.1" 200 OK

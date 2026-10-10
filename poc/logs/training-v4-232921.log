@@ -1,0 +1,386 @@
+[2026-10-10 23:29:28] arguments.py:1713 - 🚧 🚧 🚧 FSDP backend is being rewritten, please use Megatron backend for better stability. 🚧 🚧 🚧
+2026-10-10 23:29:29,694	INFO worker.py:1686 -- Using address 192.168.3.4:6380 set in the environment variable RAY_ADDRESS
+2026-10-10 23:29:29,697	INFO worker.py:1836 -- Connecting to existing Ray cluster at address: 192.168.3.4:6380...
+2026-10-10 23:29:29,760	INFO worker.py:2033 -- Connected to Ray cluster.
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:29:40] rollout.py:1180 - Launch router with args: RouterArgs(worker_urls=[], host='192.168.3.4', port=3849, mini_lb=False, pd_disaggregation=False, prefill_urls=[], decode_urls=[], policy='cache_aware', prefill_policy=None, decode_policy=None, worker_startup_timeout_secs=1800, worker_startup_check_interval=30, cache_threshold=0.3, balance_abs_threshold=10, balance_rel_threshold=1.2, eviction_interval_secs=60, max_tree_size=67108864, max_idle_secs=14400, assignment_mode='random', max_payload_size=536870912, bucket_adjust_interval_secs=5, dp_aware=False, enable_igw=False, api_key=None, log_dir=None, log_level='warn', service_discovery=False, selector={}, service_discovery_port=80, service_discovery_namespace=None, prefill_selector={}, decode_selector={}, bootstrap_port_annotation='sglang.ai/bootstrap-port', prometheus_port=4699, prometheus_host='0.0.0.0', prometheus_duration_buckets=None, request_id_headers=None, request_timeout_secs=14400, shutdown_grace_period_secs=180, max_concurrent_requests=-1, queue_size=100, queue_timeout_secs=60, rate_limit_tokens_per_second=None, cors_allowed_origins=[], retry_max_retries=5, retry_initial_backoff_ms=50, retry_max_backoff_ms=30000, retry_backoff_multiplier=1.5, retry_jitter_factor=0.2, disable_retries=False, health_failure_threshold=3, health_success_threshold=2, health_check_timeout_secs=5, health_check_interval_secs=60, health_check_endpoint='/health', disable_health_check=False, cb_failure_threshold=10, cb_success_threshold=3, cb_timeout_duration_secs=60, cb_window_duration_secs=120, disable_circuit_breaker=False, model_path=None, tokenizer_path=None, chat_template=None, tokenizer_cache_enable_l0=False, tokenizer_cache_l0_max_entries=10000, tokenizer_cache_enable_l1=False, tokenizer_cache_l1_max_memory=52428800, reasoning_parser=None, tool_call_parser=None, mcp_config_path=None, backend='sglang', history_backend='memory', oracle_wallet_path=None, oracle_tns_alias=None, oracle_connect_descriptor=None, oracle_username=None, oracle_password=None, oracle_pool_min=1, oracle_pool_max=16, oracle_pool_timeout_secs=30, postgres_db_url=None, postgres_pool_max=16, redis_url=None, redis_pool_max=16, redis_retention_days=30, client_cert_path=None, client_key_path=None, ca_cert_paths=[], server_cert_path=None, server_key_path=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', control_plane_api_keys=[], control_plane_audit_enabled=False, jwt_issuer=None, jwt_audience=None, jwt_jwks_uri=None, jwt_role_mapping={})
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:41] train_actor.py:90 - Set NUMA affinity for GPU 0
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:41] actor.py:232 - [Rank 0] Device mesh (1D): world_size=1, dp_size=1
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:42] actor.py:256 - [Rank 0] tie_word_embeddings=True, loading full model to CPU on all ranks
+[36m(FSDPTrainRayActor pid=106751)[0m Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3262.34it/s]
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:29:43] rollout.py:1191 - Router launched at 192.168.3.4:3849
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:29:43] rollout.py:73 - import openclaw_rollout.generate_rollout_openclaw as generate_rollout function.
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:29:43] rollout.py:74 - import openclaw_rollout.generate_rollout_openclaw as eval_generate_rollout function.
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:43] actor.py:1028 - FSDP MixedPrecision Policy: param_dtype=torch.bfloat16, reduce_dtype=torch.float32
+[36m(pid=106981)[0m /home/wangwei/.local/lib/python3.13/site-packages/sglang/srt/environ.py:1956: UserWarning: Environment variable SGL_DISABLE_TP_MEMORY_INBALANCE_CHECK is deprecated, please use SGLANG_DISABLE_TP_MEMORY_INBALANCE_CHECK
+[36m(pid=106981)[0m   warnings.warn(
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:46] lr_scheduler.py:80 - > learning rate decay style: constant
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:46] checkpoint.py:97 - [FSDP] No tracker file at /home/wangwei/models/Qwen3-1.7B/latest_checkpointed_iteration.txt; skipping load.
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:46] actor.py:831 - [Rank 0] Creating separate ref model from /home/wangwei/models/Qwen3-1.7B
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:46] actor.py:256 - [Rank 0] tie_word_embeddings=True, loading full model to CPU on all ranks
+[36m(FSDPTrainRayActor pid=106751)[0m Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3393.80it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:47] actor.py:1028 - FSDP MixedPrecision Policy: param_dtype=torch.bfloat16, reduce_dtype=torch.float32
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:59] actor.py:848 - [Rank 0] Reference model created with FSDP2 CPUOffloadPolicy
+[36m(FSDPTrainRayActor pid=106751)[0m /home/wangwei/.local/lib/python3.13/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+[36m(FSDPTrainRayActor pid=106751)[0m   return func(*args, **kwargs)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:59] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:29:59] timer.py:24 - Timer update_weights start
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:30:00] timer.py:32 - Timer update_weights end (elapsed: 0.6s)
+[36m(RolloutManager pid=106750)[0m INFO:     Started server process [106750]
+[36m(RolloutManager pid=106750)[0m INFO:     Waiting for application startup.
+[36m(RolloutManager pid=106750)[0m INFO:     Application startup complete.
+[36m(RolloutManager pid=106750)[0m INFO:     Uvicorn running on http://0.0.0.0:30000 (Press CTRL+C to quit)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:30:00] openclaw_api_server.py:751 - [OpenClaw] policy server ready
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:30:08] openclaw_api_server.py:777 - [32m
+[36m(RolloutManager pid=106750)[0m ======================================================================
+[36m(RolloutManager pid=106750)[0m   [OpenClaw] your model is fired up and ready to roll
+[36m(RolloutManager pid=106750)[0m   proxy 0.0.0.0:30000 -> SGLang 192.168.3.4:3849
+[36m(RolloutManager pid=106750)[0m ======================================================================
+[36m(RolloutManager pid=106750)[0m [0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:32:23] openclaw_api_server.py:542 - [33m[OpenClaw] [side] session=unknown prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:32:23] openclaw_api_server.py:546 - [31m[OpenClaw] [side] session=unknown thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user is asking "Hello! What is 2+2? Reply briefly." Let me think.
+[36m(RolloutManager pid=106750)[0m 
+[36m(RolloutManager pid=106750)[0m First, the user greeted me with "Hello!" which is a common way to start a conversation. Then they asked a straightforward[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:32:23] openclaw_api_server.py:613 - [OpenClaw] SIDE session=unknown → skipped (no training data)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:34] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-1 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:34] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-1 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user is asking for 1 + 1, and they want the answer in one word. Let me think. 1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:34] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-1 turn=1 prompt_tokens=21 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:34] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-1 index=0 score=0.0 exclude=True prompt_len=21 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:34] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-1 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:34] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-1 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:34] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-1 turn=2 prompt_tokens=39 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:34] openclaw_api_server.py:620 - [OpenClaw] session=test-session-1 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:34] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-1 index=1 score=0.0 exclude=True prompt_len=39 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-2 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-2 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, so the user is asking "What is 2 + 2? Answer in one word." Let me think. The straightforward answer[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-2 turn=1 prompt_tokens=21 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-2 index=2 score=0.0 exclude=True prompt_len=21 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-2 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-2 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-2 turn=2 prompt_tokens=39 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:620 - [OpenClaw] session=test-session-2 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-2 index=3 score=0.0 exclude=True prompt_len=39 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-3 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-3 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user is asking for the answer to 3 + 3 in one word. Let me think. 3 plus 3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-3 turn=1 prompt_tokens=21 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-3 index=4 score=0.0 exclude=True prompt_len=21 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-3 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:35] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-3 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-3 turn=2 prompt_tokens=39 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:620 - [OpenClaw] session=test-session-3 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-3 index=5 score=0.0 exclude=True prompt_len=39 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-4 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-4 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user is asking for the answer to 4 + 4 in one word. Let me think. 4 plus 4[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-4 turn=1 prompt_tokens=21 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-4 index=6 score=0.0 exclude=True prompt_len=21 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-4 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-4 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-4 turn=2 prompt_tokens=39 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:620 - [OpenClaw] session=test-session-4 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-4 index=7 score=0.0 exclude=True prompt_len=39 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-5 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-5 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user is asking for 5 plus 5, and they want the answer in one word. Let me think. 5[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-5 turn=1 prompt_tokens=21 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:36] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-5 index=8 score=0.0 exclude=True prompt_len=21 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-5 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-5 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I provided the answer to 5 +[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-5 turn=2 prompt_tokens=40 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:620 - [OpenClaw] session=test-session-5 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-5 index=9 score=0.0 exclude=True prompt_len=40 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-6 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-6 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user is asking for the answer to 6 + 6 in one word. Let me think. Well, 6 plus[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-6 turn=1 prompt_tokens=21 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-6 index=10 score=0.0 exclude=True prompt_len=21 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-6 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-6 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-6 turn=2 prompt_tokens=40 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:620 - [OpenClaw] session=test-session-6 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:37] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-6 index=11 score=0.0 exclude=True prompt_len=40 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-7 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-7 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, so the user is asking "What is 7 + 7? Answer in one word." Let me think. The problem is[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-7 turn=1 prompt_tokens=21 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-7 index=12 score=0.0 exclude=True prompt_len=21 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-7 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-7 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-7 turn=2 prompt_tokens=40 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:620 - [OpenClaw] session=test-session-7 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-7 index=13 score=0.0 exclude=True prompt_len=40 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-8 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-8 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user is asking for the answer to 8 + 8 in one word. Let me think. 8 plus 8[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-8 turn=1 prompt_tokens=21 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-8 index=14 score=0.0 exclude=True prompt_len=21 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-8 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-8 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-8 turn=2 prompt_tokens=40 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:620 - [OpenClaw] session=test-session-8 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-8 index=15 score=0.0 exclude=True prompt_len=40 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] rollout.py:286 - Final collected 16 samples from rollout to train
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:38] rollout.py:1243 - perf 0: {'rollout/prm_eval_score': 0.0, 'rollout/response_len/mean': 0.0, 'rollout/response_len/median': 0.0, 'rollout/response_len/max': 0, 'rollout/response_len/min': 0, 'rollout/zero_std/count_0.0': 16, 'rollout/repetition_frac': 0.0, 'rollout/truncated_ratio': 0.0, 'perf/rollout_time': 218.92308282852173, 'perf/longest_sample_tokens_per_sec': 0.16444131671669412, 'perf/longest_effective_sample_tokens_per_sec': 0.0}
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:38] timer.py:32 - Timer train_wait end (elapsed: 219.7s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:38] timer.py:24 - Timer train start
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-9 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-9 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, so the user is asking "What is 9 + 9? Answer in one word." Let me think.
+[36m(RolloutManager pid=106750)[0m 
+[36m(RolloutManager pid=106750)[0m First, I[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-9 turn=1 prompt_tokens=21 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-9 index=16 score=0.0 exclude=True prompt_len=21 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-9 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-9 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-9 turn=2 prompt_tokens=40 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:620 - [OpenClaw] session=test-session-9 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-9 index=17 score=0.0 exclude=True prompt_len=40 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-10 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-10 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user is asking for the answer to 10 + 10 in one word. Let me think. 10[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-10 turn=1 prompt_tokens=23 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:39] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-10 index=18 score=0.0 exclude=True prompt_len=23 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-10 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-10 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I provided the answer to their previous question[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-10 turn=2 prompt_tokens=42 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:620 - [OpenClaw] session=test-session-10 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-10 index=19 score=0.0 exclude=True prompt_len=42 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-11 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-11 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, so the user is asking "What is 11 + 11? Answer in one word." Let me think.
+[36m(RolloutManager pid=106750)[0m 
+[36m(RolloutManager pid=106750)[0m First[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-11 turn=1 prompt_tokens=23 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-11 index=20 score=0.0 exclude=True prompt_len=23 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-11 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-11 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-11 turn=2 prompt_tokens=42 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:620 - [OpenClaw] session=test-session-11 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:40] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-11 index=21 score=0.0 exclude=True prompt_len=42 response_len=26
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:40] timer.py:24 - Timer ref_log_probs start
+[36m(FSDPTrainRayActor pid=106751)[0m ref_log_probs:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-12 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-12 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user is asking for 12 plus 12 and wants the answer in one word. Let me think. 1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-12 turn=1 prompt_tokens=23 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-12 index=22 score=0.0 exclude=True prompt_len=23 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-12 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-12 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-12 turn=2 prompt_tokens=42 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:620 - [OpenClaw] session=test-session-12 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-12 index=23 score=0.0 exclude=True prompt_len=42 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-13 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-13 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, let's see. The user is asking for 13 plus 13, and they want the answer in one word.[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-13 turn=1 prompt_tokens=23 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:41] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-13 index=24 score=0.0 exclude=True prompt_len=23 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-13 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-13 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-13 turn=2 prompt_tokens=42 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:620 - [OpenClaw] session=test-session-13 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-13 index=25 score=0.0 exclude=True prompt_len=42 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-14 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-14 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, let's see. The user is asking for 14 plus 14, and they want the answer in one word.[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-14 turn=1 prompt_tokens=23 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-14 index=26 score=0.0 exclude=True prompt_len=23 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-14 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-14 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I answered their previous question. Let me[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-14 turn=2 prompt_tokens=42 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:620 - [OpenClaw] session=test-session-14 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-14 index=27 score=0.0 exclude=True prompt_len=42 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-15 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-15 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, so the user is asking for 15 plus 15, and they want the answer in one word. Let me think[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-15 turn=1 prompt_tokens=23 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:42] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-15 index=28 score=0.0 exclude=True prompt_len=23 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-15 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-15 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I provided the answer to 15[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-15 turn=2 prompt_tokens=42 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:620 - [OpenClaw] session=test-session-15 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-15 index=29 score=0.0 exclude=True prompt_len=42 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-16 prompt_msgs=1[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-16 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, so the user is asking for 16 plus 16, and they want the answer in one word. Let me think[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-16 turn=1 prompt_tokens=23 response_tokens=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-16 index=30 score=0.0 exclude=True prompt_len=23 response_len=36
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=test-session-16 prompt_msgs=3[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=test-session-16 thinking=0 chars, response:
+[36m(RolloutManager pid=106750)[0m <think>
+[36m(RolloutManager pid=106750)[0m Okay, the user just said "Thanks!" after I provided the answer to 16[0m
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:605 - [OpenClaw] MAIN session=test-session-16 turn=2 prompt_tokens=42 response_tokens=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:620 - [OpenClaw] session=test-session-16 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=test-session-16 index=31 score=0.0 exclude=True prompt_len=42 response_len=26
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] rollout.py:286 - Final collected 16 samples from rollout to train
+[36m(RolloutManager pid=106750)[0m [2026-10-10 23:33:43] rollout.py:1243 - perf 1: {'rollout/prm_eval_score': 0.0, 'rollout/response_len/mean': 0.0, 'rollout/response_len/median': 0.0, 'rollout/response_len/max': 0, 'rollout/response_len/min': 0, 'rollout/zero_std/count_0.0': 16, 'rollout/repetition_frac': 0.0, 'rollout/truncated_ratio': 0.0, 'perf/rollout_time': 4.938707590103149, 'perf/longest_sample_tokens_per_sec': 7.28935644461755, 'perf/longest_effective_sample_tokens_per_sec': 0.0}
+[36m(FSDPTrainRayActor pid=106751)[0m ref_log_probs: 100%|██████████| 1/1 [00:04<00:00,  4.93s/it]ref_log_probs: 100%|██████████| 1/1 [00:04<00:00,  4.93s/it]
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:45] timer.py:32 - Timer ref_log_probs end (elapsed: 4.9s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:46] timer.py:24 - Timer log_probs start
+[36m(FSDPTrainRayActor pid=106751)[0m log_probs:   0%|          | 0/1 [00:00<?, ?it/s][transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+[36m(FSDPTrainRayActor pid=106751)[0m log_probs: 100%|██████████| 1/1 [00:00<00:00,  3.29it/s]log_probs: 100%|██████████| 1/1 [00:00<00:00,  3.29it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:47] timer.py:32 - Timer log_probs end (elapsed: 0.3s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:47] actor.py:519 - rollout 0: {'rollout/raw_reward': 0.0, 'rollout/log_probs': 0.0, 'rollout/rollout_log_probs': 0.0, 'rollout/ref_log_probs': 0.0, 'rollout/advantages': 0.0, 'rollout/returns': 0.0}
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:47] timer.py:24 - Timer actor_train start
+[36m(FSDPTrainRayActor pid=106751)[0m actor_train:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:54] actor.py:754 - , kl_loss: 0.0000, kl_penalty: 0.0000
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:54] actor.py:755 - step 0: {'train/loss': 0.0, 'train/pg_loss': 0.0, 'train/pg_clipfrac': 0.0, 'train/ppo_kl': 0.0, 'train/entropy_loss': 0.0, 'train/train_rollout_logprob_abs_diff': 0.0, 'train/kl_loss': 0.0, 'train/grad_norm': 0.0, 'train/lr-pg_0': 1e-05}
+[36m(FSDPTrainRayActor pid=106751)[0m actor_train: 100%|██████████| 1/1 [00:07<00:00,  7.56s/it]actor_train: 100%|██████████| 1/1 [00:07<00:00,  7.56s/it]
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:54] timer.py:32 - Timer actor_train end (elapsed: 7.6s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:54] timer.py:32 - Timer train end (elapsed: 15.7s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:54] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:54] train_metric_utils.py:44 - perf 0: {'perf/update_weights_time': 0.6268866062164307, 'perf/train_wait_time': 219.6748161315918, 'perf/ref_log_probs_time': 4.9314939975738525, 'perf/log_probs_time': 0.3051726818084717, 'perf/actor_train_time': 7.559586048126221, 'perf/train_time': 15.685486078262329, 'perf/step_time': 235.36030220985413, 'perf/wait_time_ratio': 0.9333554302446608}
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:54] timer.py:24 - Timer update_weights start
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:55] timer.py:32 - Timer update_weights end (elapsed: 0.6s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:55] timer.py:32 - Timer train_wait end (elapsed: 0.6s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:55] timer.py:24 - Timer train start
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:57] timer.py:24 - Timer ref_log_probs start
+[36m(FSDPTrainRayActor pid=106751)[0m ref_log_probs:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m ref_log_probs: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s]ref_log_probs: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:57] timer.py:32 - Timer ref_log_probs end (elapsed: 0.4s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:59] timer.py:24 - Timer log_probs start
+[36m(FSDPTrainRayActor pid=106751)[0m log_probs:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m log_probs: 100%|██████████| 1/1 [00:00<00:00,  4.06it/s]log_probs: 100%|██████████| 1/1 [00:00<00:00,  4.05it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:59] timer.py:32 - Timer log_probs end (elapsed: 0.2s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:59] actor.py:519 - rollout 1: {'rollout/raw_reward': 0.0, 'rollout/log_probs': 0.0, 'rollout/rollout_log_probs': 0.0, 'rollout/ref_log_probs': 0.0, 'rollout/advantages': 0.0, 'rollout/returns': 0.0}
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:33:59] timer.py:24 - Timer actor_train start
+[36m(FSDPTrainRayActor pid=106751)[0m actor_train:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:34:00] actor.py:754 - , kl_loss: 0.0000, kl_penalty: 0.0000
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:34:00] actor.py:755 - step 1: {'train/loss': 0.0, 'train/pg_loss': 0.0, 'train/pg_clipfrac': 0.0, 'train/ppo_kl': 0.0, 'train/entropy_loss': 0.0, 'train/train_rollout_logprob_abs_diff': 0.0, 'train/kl_loss': 0.0, 'train/grad_norm': 0.0, 'train/lr-pg_0': 1e-05}
+[36m(FSDPTrainRayActor pid=106751)[0m actor_train: 100%|██████████| 1/1 [00:00<00:00,  1.45it/s]actor_train: 100%|██████████| 1/1 [00:00<00:00,  1.45it/s]
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:34:00] timer.py:32 - Timer actor_train end (elapsed: 0.7s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:34:00] timer.py:32 - Timer train end (elapsed: 5.1s)
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:34:00] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=106751)[0m [2026-10-10 23:34:00] train_metric_utils.py:44 - perf 1: {'perf/update_weights_time': 0.610055685043335, 'perf/train_wait_time': 0.6152245998382568, 'perf/ref_log_probs_time': 0.3689093589782715, 'perf/log_probs_time': 0.2478947639465332, 'perf/actor_train_time': 0.6915469169616699, 'perf/train_time': 5.08077335357666, 'perf/step_time': 5.695997953414917, 'perf/wait_time_ratio': 0.10800997557757402}
+*** SIGTERM received at time=1791646532 on cpu 26 ***
+PC: @     0x7404c1e98e51  (unknown)  (unknown)
+    @     0x7404c1e45330  (unknown)  (unknown)
+    @     0x7404c1e9bd6e        224  pthread_cond_timedwait
+    @     0x7404a9a7728f       1184  ray::core::GetRequest::Wait()
+    @     0x7404a9a793e7       1328  ray::core::CoreWorkerMemoryStore::GetImpl()
+    @     0x7404a9a79e39         64  ray::core::CoreWorkerMemoryStore::Get()
+    @     0x7404a9a7a03f        208  ray::core::CoreWorkerMemoryStore::Get()
+    @     0x7404a990df9a       1472  ray::core::CoreWorker::GetObjects()
+    @     0x7404a990ec80        160  ray::core::CoreWorker::Get()
+    @     0x7404a9825f30        272  __pyx_pw_3ray_7_raylet_10CoreWorker_35get_objects()
+    @           0x593cd6  (unknown)  PyObject_Vectorcall
+    @     0x7404aac929e0  (unknown)  (unknown)
+[2026-10-10 23:35:32,878 E 105232 105232] logging.cc:474: *** SIGTERM received at time=1791646532 on cpu 26 ***
+[2026-10-10 23:35:32,880 E 105232 105232] logging.cc:474: PC: @     0x7404c1e98e51  (unknown)  (unknown)
+[2026-10-10 23:35:32,880 E 105232 105232] logging.cc:474:     @     0x7404c1e45330  (unknown)  (unknown)
+[2026-10-10 23:35:32,881 E 105232 105232] logging.cc:474:     @     0x7404c1e9bd6e        224  pthread_cond_timedwait
+[2026-10-10 23:35:32,881 E 105232 105232] logging.cc:474:     @     0x7404a9a7728f       1184  ray::core::GetRequest::Wait()
+[2026-10-10 23:35:32,881 E 105232 105232] logging.cc:474:     @     0x7404a9a793e7       1328  ray::core::CoreWorkerMemoryStore::GetImpl()
+[2026-10-10 23:35:32,881 E 105232 105232] logging.cc:474:     @     0x7404a9a79e39         64  ray::core::CoreWorkerMemoryStore::Get()
+[2026-10-10 23:35:32,881 E 105232 105232] logging.cc:474:     @     0x7404a9a7a03f        208  ray::core::CoreWorkerMemoryStore::Get()
+[2026-10-10 23:35:32,881 E 105232 105232] logging.cc:474:     @     0x7404a990df9a       1472  ray::core::CoreWorker::GetObjects()
+[2026-10-10 23:35:32,881 E 105232 105232] logging.cc:474:     @     0x7404a990ec80        160  ray::core::CoreWorker::Get()
+[2026-10-10 23:35:32,881 E 105232 105232] logging.cc:474:     @     0x7404a9825f30        272  __pyx_pw_3ray_7_raylet_10CoreWorker_35get_objects()
+[2026-10-10 23:35:32,881 E 105232 105232] logging.cc:474:     @           0x593cd6  (unknown)  PyObject_Vectorcall
+[2026-10-10 23:35:32,883 E 105232 105232] logging.cc:474:     @     0x7404aac929e0  (unknown)  (unknown)
+[36m(FSDPTrainRayActor pid=106751)[0m trainable params: 34,865,152 || all params: 1,755,440,128 || trainable%: 1.9861
+[36m(RolloutManager pid=106750)[0m [2m2026-10-10 15:29:52[0m [33m WARN[0m [2msmg::core::steps::worker::local::discover_metadata[0m[2m:[0m [2m/home/runner/work/sglang/sglang/src/core/steps/worker/local/discover_metadata.rs[0m[2m:[0m[2m64:[0m Endpoint '/server_info' returned 404, falling back to '/get_server_info' for backward compatibility. The '/get_server_info' endpoint is deprecated and will be removed in a future version. Please use '/server_info' instead.
+[36m(RolloutManager pid=106750)[0m [2m2026-10-10 15:29:52[0m [33m WARN[0m [2msmg::core::steps::worker::local::discover_metadata[0m[2m:[0m [2m/home/runner/work/sglang/sglang/src/core/steps/worker/local/discover_metadata.rs[0m[2m:[0m[2m64:[0m Endpoint '/model_info' returned 404, falling back to '/get_model_info' for backward compatibility. The '/get_model_info' endpoint is deprecated and will be removed in a future version. Please use '/model_info' instead.
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] submission resumed
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:43594 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55284 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55294 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55302 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55304 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55310 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55326 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55346 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55362 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55374 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55386 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55394 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:55408 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42438 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42450 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42460 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] drained 16 groups in 218.09s
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] submission paused
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] prm_eval_score=0.0000 (n=16)
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] submission resumed
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42476 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42482 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42484 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42486 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42490 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42504 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42512 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42514 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42530 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42534 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42540 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42556 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42564 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42570 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42584 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m INFO:     127.0.0.1:42586 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] drained 16 groups in 4.94s
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] submission paused
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] prm_eval_score=0.0000 (n=16)
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] submission resumed
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=106750)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0

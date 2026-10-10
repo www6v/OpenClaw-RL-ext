@@ -1,0 +1,141 @@
+[2026-10-10 23:25:44] arguments.py:1713 - 🚧 🚧 🚧 FSDP backend is being rewritten, please use Megatron backend for better stability. 🚧 🚧 🚧
+2026-10-10 23:25:45,713	INFO worker.py:1686 -- Using address 192.168.3.4:6380 set in the environment variable RAY_ADDRESS
+2026-10-10 23:25:45,716	INFO worker.py:1836 -- Connecting to existing Ray cluster at address: 192.168.3.4:6380...
+2026-10-10 23:25:45,784	INFO worker.py:2033 -- Connected to Ray cluster.
+[36m(RolloutManager pid=104004)[0m [2026-10-10 23:25:54] rollout.py:1180 - Launch router with args: RouterArgs(worker_urls=[], host='192.168.3.4', port=4331, mini_lb=False, pd_disaggregation=False, prefill_urls=[], decode_urls=[], policy='cache_aware', prefill_policy=None, decode_policy=None, worker_startup_timeout_secs=1800, worker_startup_check_interval=30, cache_threshold=0.3, balance_abs_threshold=10, balance_rel_threshold=1.2, eviction_interval_secs=60, max_tree_size=67108864, max_idle_secs=14400, assignment_mode='random', max_payload_size=536870912, bucket_adjust_interval_secs=5, dp_aware=False, enable_igw=False, api_key=None, log_dir=None, log_level='warn', service_discovery=False, selector={}, service_discovery_port=80, service_discovery_namespace=None, prefill_selector={}, decode_selector={}, bootstrap_port_annotation='sglang.ai/bootstrap-port', prometheus_port=5384, prometheus_host='0.0.0.0', prometheus_duration_buckets=None, request_id_headers=None, request_timeout_secs=14400, shutdown_grace_period_secs=180, max_concurrent_requests=-1, queue_size=100, queue_timeout_secs=60, rate_limit_tokens_per_second=None, cors_allowed_origins=[], retry_max_retries=5, retry_initial_backoff_ms=50, retry_max_backoff_ms=30000, retry_backoff_multiplier=1.5, retry_jitter_factor=0.2, disable_retries=False, health_failure_threshold=3, health_success_threshold=2, health_check_timeout_secs=5, health_check_interval_secs=60, health_check_endpoint='/health', disable_health_check=False, cb_failure_threshold=10, cb_success_threshold=3, cb_timeout_duration_secs=60, cb_window_duration_secs=120, disable_circuit_breaker=False, model_path=None, tokenizer_path=None, chat_template=None, tokenizer_cache_enable_l0=False, tokenizer_cache_l0_max_entries=10000, tokenizer_cache_enable_l1=False, tokenizer_cache_l1_max_memory=52428800, reasoning_parser=None, tool_call_parser=None, mcp_config_path=None, backend='sglang', history_backend='memory', oracle_wallet_path=None, oracle_tns_alias=None, oracle_connect_descriptor=None, oracle_username=None, oracle_password=None, oracle_pool_min=1, oracle_pool_max=16, oracle_pool_timeout_secs=30, postgres_db_url=None, postgres_pool_max=16, redis_url=None, redis_pool_max=16, redis_retention_days=30, client_cert_path=None, client_key_path=None, ca_cert_paths=[], server_cert_path=None, server_key_path=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', control_plane_api_keys=[], control_plane_audit_enabled=False, jwt_issuer=None, jwt_audience=None, jwt_jwks_uri=None, jwt_role_mapping={})
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:25:55] train_actor.py:90 - Set NUMA affinity for GPU 0
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:25:55] actor.py:232 - [Rank 0] Device mesh (1D): world_size=1, dp_size=1
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:25:56] actor.py:256 - [Rank 0] tie_word_embeddings=True, loading full model to CPU on all ranks
+[36m(FSDPTrainRayActor pid=104005)[0m Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=104005)[0m Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3342.94it/s]
+[36m(RolloutManager pid=104004)[0m [2026-10-10 23:25:57] rollout.py:1191 - Router launched at 192.168.3.4:4331
+[36m(RolloutManager pid=104004)[0m [2026-10-10 23:25:57] rollout.py:73 - import openclaw_rollout.generate_rollout_openclaw as generate_rollout function.
+[36m(RolloutManager pid=104004)[0m [2026-10-10 23:25:57] rollout.py:74 - import openclaw_rollout.generate_rollout_openclaw as eval_generate_rollout function.
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:25:58] actor.py:1028 - FSDP MixedPrecision Policy: param_dtype=torch.bfloat16, reduce_dtype=torch.float32
+[36m(pid=104197)[0m /home/wangwei/.local/lib/python3.13/site-packages/sglang/srt/environ.py:1956: UserWarning: Environment variable SGL_DISABLE_TP_MEMORY_INBALANCE_CHECK is deprecated, please use SGLANG_DISABLE_TP_MEMORY_INBALANCE_CHECK
+[36m(pid=104197)[0m   warnings.warn(
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:26:01] lr_scheduler.py:80 - > learning rate decay style: constant
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:26:01] checkpoint.py:97 - [FSDP] No tracker file at /home/wangwei/models/Qwen3-1.7B/latest_checkpointed_iteration.txt; skipping load.
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:26:01] actor.py:831 - [Rank 0] Creating separate ref model from /home/wangwei/models/Qwen3-1.7B
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:26:01] actor.py:256 - [Rank 0] tie_word_embeddings=True, loading full model to CPU on all ranks
+[36m(FSDPTrainRayActor pid=104005)[0m Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=104005)[0m Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3770.05it/s]
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:26:01] actor.py:1028 - FSDP MixedPrecision Policy: param_dtype=torch.bfloat16, reduce_dtype=torch.float32
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:26:13] actor.py:848 - [Rank 0] Reference model created with FSDP2 CPUOffloadPolicy
+[36m(FSDPTrainRayActor pid=104005)[0m /home/wangwei/.local/lib/python3.13/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+[36m(FSDPTrainRayActor pid=104005)[0m   return func(*args, **kwargs)
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:26:14] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:26:14] timer.py:24 - Timer update_weights start
+[36m(FSDPTrainRayActor pid=104005)[0m [2026-10-10 23:26:14] timer.py:32 - Timer update_weights end (elapsed: 0.7s)
+[36m(RolloutManager pid=104004)[0m INFO:     Started server process [104004]
+[36m(RolloutManager pid=104004)[0m INFO:     Waiting for application startup.
+[36m(RolloutManager pid=104004)[0m INFO:     Application startup complete.
+[36m(RolloutManager pid=104004)[0m INFO:     Uvicorn running on http://0.0.0.0:30000 (Press CTRL+C to quit)
+[36m(RolloutManager pid=104004)[0m [2026-10-10 23:26:15] openclaw_api_server.py:751 - [OpenClaw] policy server ready
+[36m(RolloutManager pid=104004)[0m [2026-10-10 23:26:23] openclaw_api_server.py:777 - [32m
+[36m(RolloutManager pid=104004)[0m ======================================================================
+[36m(RolloutManager pid=104004)[0m   [OpenClaw] your model is fired up and ready to roll
+[36m(RolloutManager pid=104004)[0m   proxy 0.0.0.0:30000 -> SGLang 192.168.3.4:4331
+[36m(RolloutManager pid=104004)[0m ======================================================================
+[36m(RolloutManager pid=104004)[0m [0m
+[36m(RolloutManager pid=104004)[0m [2026-10-10 23:26:45] openclaw_api_server.py:528 - [OpenClaw] SGLang returned 503: {"error":{"type":"Service Unavailable","code":"no_available_workers","message":"No available workers (all circuits open or unhealthy)"}}
+[36m(RolloutManager pid=104004)[0m ERROR:    Exception in ASGI application
+[36m(RolloutManager pid=104004)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 422, in run_asgi
+[36m(RolloutManager pid=104004)[0m     result = await app(  # type: ignore[func-returns-value]
+[36m(RolloutManager pid=104004)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=104004)[0m         self.scope, self.receive, self.send
+[36m(RolloutManager pid=104004)[0m         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=104004)[0m     )
+[36m(RolloutManager pid=104004)[0m     ^
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+[36m(RolloutManager pid=104004)[0m     return await self.app(scope, receive, send)
+[36m(RolloutManager pid=104004)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+[36m(RolloutManager pid=104004)[0m     await super().__call__(scope, receive, send)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/applications.py", line 96, in __call__
+[36m(RolloutManager pid=104004)[0m     await self.middleware_stack(scope, receive, send)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+[36m(RolloutManager pid=104004)[0m     raise exc
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+[36m(RolloutManager pid=104004)[0m     await self.app(scope, receive, _send)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+[36m(RolloutManager pid=104004)[0m     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+[36m(RolloutManager pid=104004)[0m     raise exc
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+[36m(RolloutManager pid=104004)[0m     await app(scope, receive, sender)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+[36m(RolloutManager pid=104004)[0m     await self.app(scope, receive, send)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/routing.py", line 670, in __call__
+[36m(RolloutManager pid=104004)[0m     await self.middleware_stack(scope, receive, send)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/routing.py", line 690, in app
+[36m(RolloutManager pid=104004)[0m     await route.handle(scope, receive, send)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/routing.py", line 280, in handle
+[36m(RolloutManager pid=104004)[0m     await self.app(scope, receive, send)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+[36m(RolloutManager pid=104004)[0m     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+[36m(RolloutManager pid=104004)[0m     raise exc
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+[36m(RolloutManager pid=104004)[0m     await app(scope, receive, sender)
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+[36m(RolloutManager pid=104004)[0m     response = await f(request)
+[36m(RolloutManager pid=104004)[0m                ^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+[36m(RolloutManager pid=104004)[0m     raw_response = await run_endpoint_function(
+[36m(RolloutManager pid=104004)[0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=104004)[0m     ...<3 lines>...
+[36m(RolloutManager pid=104004)[0m     )
+[36m(RolloutManager pid=104004)[0m     ^
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+[36m(RolloutManager pid=104004)[0m     return await dependant.call(**values)
+[36m(RolloutManager pid=104004)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 323, in chat_completions
+[36m(RolloutManager pid=104004)[0m     result = await owner._handle_request(
+[36m(RolloutManager pid=104004)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=104004)[0m         body, session_id=session_id, turn_type=turn_type, session_done=session_done,
+[36m(RolloutManager pid=104004)[0m         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=104004)[0m     )
+[36m(RolloutManager pid=104004)[0m     ^
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 529, in _handle_request
+[36m(RolloutManager pid=104004)[0m     sglang_resp.raise_for_status()
+[36m(RolloutManager pid=104004)[0m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[36m(RolloutManager pid=104004)[0m   File "/home/wangwei/.local/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+[36m(RolloutManager pid=104004)[0m     raise HTTPStatusError(message, request=request, response=self)
+[36m(RolloutManager pid=104004)[0m httpx.HTTPStatusError: Server error '503 Service Unavailable' for url 'http://192.168.3.4:4331/v1/chat/completions'
+[36m(RolloutManager pid=104004)[0m For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+*** SIGTERM received at time=1791646091 on cpu 21 ***
+PC: @     0x705ff4498e51  (unknown)  (unknown)
+    @     0x705ff4445330  332559536  (unknown)
+    @     0x705ff449bd6e        224  pthread_cond_timedwait
+    @     0x705fdc07728f       1184  ray::core::GetRequest::Wait()
+    @     0x705fdc0793e7       1328  ray::core::CoreWorkerMemoryStore::GetImpl()
+    @     0x705fdc079e39         64  ray::core::CoreWorkerMemoryStore::Get()
+    @     0x705fdc07a03f        208  ray::core::CoreWorkerMemoryStore::Get()
+    @     0x705fdbf0df9a       1472  ray::core::CoreWorker::GetObjects()
+    @     0x705fdbf0ec80        160  ray::core::CoreWorker::Get()
+    @     0x705fdbe25f30        272  __pyx_pw_3ray_7_raylet_10CoreWorker_35get_objects()
+    @           0x593cd6  (unknown)  PyObject_Vectorcall
+    @     0x705fdd2929e0  (unknown)  (unknown)
+[2026-10-10 23:28:11,263 E 103900 103900] logging.cc:474: *** SIGTERM received at time=1791646091 on cpu 21 ***
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474: PC: @     0x705ff4498e51  (unknown)  (unknown)
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474:     @     0x705ff4445330  332559536  (unknown)
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474:     @     0x705ff449bd6e        224  pthread_cond_timedwait
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474:     @     0x705fdc07728f       1184  ray::core::GetRequest::Wait()
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474:     @     0x705fdc0793e7       1328  ray::core::CoreWorkerMemoryStore::GetImpl()
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474:     @     0x705fdc079e39         64  ray::core::CoreWorkerMemoryStore::Get()
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474:     @     0x705fdc07a03f        208  ray::core::CoreWorkerMemoryStore::Get()
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474:     @     0x705fdbf0df9a       1472  ray::core::CoreWorker::GetObjects()
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474:     @     0x705fdbf0ec80        160  ray::core::CoreWorker::Get()
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474:     @     0x705fdbe25f30        272  __pyx_pw_3ray_7_raylet_10CoreWorker_35get_objects()
+[2026-10-10 23:28:11,266 E 103900 103900] logging.cc:474:     @           0x593cd6  (unknown)  PyObject_Vectorcall
+[2026-10-10 23:28:11,270 E 103900 103900] logging.cc:474:     @     0x705fdd2929e0  (unknown)  (unknown)
+[36m(FSDPTrainRayActor pid=104005)[0m trainable params: 34,865,152 || all params: 1,755,440,128 || trainable%: 1.9861
+[36m(RolloutManager pid=104004)[0m [OpenClawWorker] submission resumed
+[36m(RolloutManager pid=104004)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=104004)[0m [2m2026-10-10 15:26:45[0m [31mERROR[0m [2msmg::response[0m[2m:[0m [2m/home/runner/work/sglang/sglang/src/middleware.rs[0m[2m:[0m[2m349:[0m request failed with server error
+[36m(RolloutManager pid=104004)[0m INFO:     127.0.0.1:47254 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+[36m(RolloutManager pid=104004)[0m INFO:     127.0.0.1:47266 - "GET /health HTTP/1.1" 404 Not Found
+[36m(RolloutManager pid=104004)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=104004)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0

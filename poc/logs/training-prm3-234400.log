@@ -1,0 +1,545 @@
+[2026-10-10 23:44:08] arguments.py:1713 - 🚧 🚧 🚧 FSDP backend is being rewritten, please use Megatron backend for better stability. 🚧 🚧 🚧
+2026-10-10 23:44:09,780	INFO worker.py:1686 -- Using address 192.168.3.4:6380 set in the environment variable RAY_ADDRESS
+2026-10-10 23:44:09,783	INFO worker.py:1836 -- Connecting to existing Ray cluster at address: 192.168.3.4:6380...
+2026-10-10 23:44:09,843	INFO worker.py:2033 -- Connected to Ray cluster.
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:44:20] rollout.py:1180 - Launch router with args: RouterArgs(worker_urls=[], host='192.168.3.4', port=3726, mini_lb=False, pd_disaggregation=False, prefill_urls=[], decode_urls=[], policy='cache_aware', prefill_policy=None, decode_policy=None, worker_startup_timeout_secs=1800, worker_startup_check_interval=30, cache_threshold=0.3, balance_abs_threshold=10, balance_rel_threshold=1.2, eviction_interval_secs=60, max_tree_size=67108864, max_idle_secs=14400, assignment_mode='random', max_payload_size=536870912, bucket_adjust_interval_secs=5, dp_aware=False, enable_igw=False, api_key=None, log_dir=None, log_level='warn', service_discovery=False, selector={}, service_discovery_port=80, service_discovery_namespace=None, prefill_selector={}, decode_selector={}, bootstrap_port_annotation='sglang.ai/bootstrap-port', prometheus_port=5005, prometheus_host='0.0.0.0', prometheus_duration_buckets=None, request_id_headers=None, request_timeout_secs=14400, shutdown_grace_period_secs=180, max_concurrent_requests=-1, queue_size=100, queue_timeout_secs=60, rate_limit_tokens_per_second=None, cors_allowed_origins=[], retry_max_retries=5, retry_initial_backoff_ms=50, retry_max_backoff_ms=30000, retry_backoff_multiplier=1.5, retry_jitter_factor=0.2, disable_retries=False, health_failure_threshold=3, health_success_threshold=2, health_check_timeout_secs=5, health_check_interval_secs=60, health_check_endpoint='/health', disable_health_check=False, cb_failure_threshold=10, cb_success_threshold=3, cb_timeout_duration_secs=60, cb_window_duration_secs=120, disable_circuit_breaker=False, model_path=None, tokenizer_path=None, chat_template=None, tokenizer_cache_enable_l0=False, tokenizer_cache_l0_max_entries=10000, tokenizer_cache_enable_l1=False, tokenizer_cache_l1_max_memory=52428800, reasoning_parser=None, tool_call_parser=None, mcp_config_path=None, backend='sglang', history_backend='memory', oracle_wallet_path=None, oracle_tns_alias=None, oracle_connect_descriptor=None, oracle_username=None, oracle_password=None, oracle_pool_min=1, oracle_pool_max=16, oracle_pool_timeout_secs=30, postgres_db_url=None, postgres_pool_max=16, redis_url=None, redis_pool_max=16, redis_retention_days=30, client_cert_path=None, client_key_path=None, ca_cert_paths=[], server_cert_path=None, server_key_path=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', control_plane_api_keys=[], control_plane_audit_enabled=False, jwt_issuer=None, jwt_audience=None, jwt_jwks_uri=None, jwt_role_mapping={})
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:21] train_actor.py:90 - Set NUMA affinity for GPU 0
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:21] actor.py:232 - [Rank 0] Device mesh (1D): world_size=1, dp_size=1
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:22] actor.py:256 - [Rank 0] tie_word_embeddings=True, loading full model to CPU on all ranks
+[36m(FSDPTrainRayActor pid=112520)[0m Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3720.97it/s]
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:44:23] rollout.py:1191 - Router launched at 192.168.3.4:3726
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:44:23] rollout.py:73 - import openclaw_rollout.generate_rollout_openclaw as generate_rollout function.
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:44:23] rollout.py:74 - import openclaw_rollout.generate_rollout_openclaw as eval_generate_rollout function.
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:23] actor.py:1028 - FSDP MixedPrecision Policy: param_dtype=torch.bfloat16, reduce_dtype=torch.float32
+[36m(pid=112750)[0m /home/wangwei/.local/lib/python3.13/site-packages/sglang/srt/environ.py:1956: UserWarning: Environment variable SGL_DISABLE_TP_MEMORY_INBALANCE_CHECK is deprecated, please use SGLANG_DISABLE_TP_MEMORY_INBALANCE_CHECK
+[36m(pid=112750)[0m   warnings.warn(
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:27] lr_scheduler.py:80 - > learning rate decay style: constant
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:27] checkpoint.py:97 - [FSDP] No tracker file at /home/wangwei/models/Qwen3-1.7B/latest_checkpointed_iteration.txt; skipping load.
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:27] actor.py:831 - [Rank 0] Creating separate ref model from /home/wangwei/models/Qwen3-1.7B
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:27] actor.py:256 - [Rank 0] tie_word_embeddings=True, loading full model to CPU on all ranks
+[36m(FSDPTrainRayActor pid=112520)[0m Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=112520)[0m Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3463.96it/s]
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:27] actor.py:1028 - FSDP MixedPrecision Policy: param_dtype=torch.bfloat16, reduce_dtype=torch.float32
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:39] actor.py:848 - [Rank 0] Reference model created with FSDP2 CPUOffloadPolicy
+[36m(FSDPTrainRayActor pid=112520)[0m /home/wangwei/.local/lib/python3.13/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+[36m(FSDPTrainRayActor pid=112520)[0m   return func(*args, **kwargs)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:39] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:39] timer.py:24 - Timer update_weights start
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:44:40] timer.py:32 - Timer update_weights end (elapsed: 0.6s)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:44:41] openclaw_api_server.py:268 - [OpenClaw] PRM enabled: url=http://127.0.0.1:30001/generate m=3
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:44:41] openclaw_api_server.py:277 - [OpenClaw] record file initialized (cleared): /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record.jsonl
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:44:41] openclaw_api_server.py:286 - [OpenClaw] PRM record file initialized (cleared): /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record_prm.jsonl
+[36m(RolloutManager pid=112519)[0m INFO:     Started server process [112519]
+[36m(RolloutManager pid=112519)[0m INFO:     Waiting for application startup.
+[36m(RolloutManager pid=112519)[0m INFO:     Application startup complete.
+[36m(RolloutManager pid=112519)[0m INFO:     Uvicorn running on http://0.0.0.0:30000 (Press CTRL+C to quit)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:44:41] openclaw_api_server.py:751 - [OpenClaw] policy server ready
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:44:41] openclaw_api_server.py:763 - [OpenClaw] PRM server ready
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:44:49] openclaw_api_server.py:777 - [32m
+[36m(RolloutManager pid=112519)[0m ======================================================================
+[36m(RolloutManager pid=112519)[0m   [OpenClaw] your model is fired up and ready to roll
+[36m(RolloutManager pid=112519)[0m   proxy 0.0.0.0:30000 -> SGLang 192.168.3.4:3726
+[36m(RolloutManager pid=112519)[0m   PRM enabled: http://127.0.0.1:30001/generate (m=3)
+[36m(RolloutManager pid=112519)[0m ======================================================================
+[36m(RolloutManager pid=112519)[0m [0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-1 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-1 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking "What is 1+1? Brief answer." Let[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-1 turn=1 prompt_tokens=18 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-1 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-1 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-1 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-1 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-1 turn=2 prompt_tokens=33 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:620 - [OpenClaw] session=real-test-1 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-1 index=0 score=0.0 exclude=True prompt_len=33 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-1 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-1 index=1 score=0.0 exclude=False prompt_len=18 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-2 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-2 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking "What is 2+2? Brief answer." Let[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:07] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-2 turn=1 prompt_tokens=18 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-2 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-2 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-2 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-2 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-2 turn=2 prompt_tokens=33 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:620 - [OpenClaw] session=real-test-2 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-2 index=2 score=0.0 exclude=True prompt_len=33 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-2 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-2 index=3 score=0.0 exclude=False prompt_len=18 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-3 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-3 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 3 plus 3. Let me[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-3 turn=1 prompt_tokens=18 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-3 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-3 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-3 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-3 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-3 turn=2 prompt_tokens=33 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:620 - [OpenClaw] session=real-test-3 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-3 index=4 score=0.0 exclude=True prompt_len=33 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-3 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-3 index=5 score=0.0 exclude=False prompt_len=18 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-4 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-4 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 4+4. Let me think[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:08] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-4 turn=1 prompt_tokens=18 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-4 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-4 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-4 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-4 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-4 turn=2 prompt_tokens=33 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:620 - [OpenClaw] session=real-test-4 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-4 index=6 score=0.0 exclude=True prompt_len=33 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-4 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-4 index=7 score=0.0 exclude=False prompt_len=18 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-5 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-5 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 5 plus 5. Let me[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-5 turn=1 prompt_tokens=18 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-5 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-5 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-5 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-5 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-5 turn=2 prompt_tokens=34 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:620 - [OpenClaw] session=real-test-5 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-5 index=8 score=0.0 exclude=True prompt_len=34 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-5 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-5 index=9 score=0.0 exclude=False prompt_len=18 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-6 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-6 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 6 plus 6. Let me[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:09] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-6 turn=1 prompt_tokens=18 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-6 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-6 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-6 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-6 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-6 turn=2 prompt_tokens=34 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:620 - [OpenClaw] session=real-test-6 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-6 index=10 score=0.0 exclude=True prompt_len=34 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-6 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-6 index=11 score=0.0 exclude=False prompt_len=18 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-7 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-7 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 7 plus 7. Let me[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-7 turn=1 prompt_tokens=18 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-7 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-7 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-7 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-7 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-7 turn=2 prompt_tokens=34 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:620 - [OpenClaw] session=real-test-7 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-7 index=12 score=0.0 exclude=True prompt_len=34 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-7 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-7 index=13 score=0.0 exclude=False prompt_len=18 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-8 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-8 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 8 plus 8. Let me[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:10] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-8 turn=1 prompt_tokens=18 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-8 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-8 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-8 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-8 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-8 turn=2 prompt_tokens=34 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:620 - [OpenClaw] session=real-test-8 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-8 index=14 score=0.0 exclude=True prompt_len=34 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-8 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-8 index=15 score=0.0 exclude=False prompt_len=18 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:417 - [OpenClaw] record file purged: /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record.jsonl
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:417 - [OpenClaw] PRM record file purged: /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record_prm.jsonl
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] rollout.py:286 - Final collected 16 samples from rollout to train
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] rollout.py:1243 - perf 0: {'rollout/prm_eval_score': 0.0, 'rollout/response_len/mean': 13.0, 'rollout/response_len/median': 13.0, 'rollout/response_len/max': 26, 'rollout/response_len/min': 0, 'rollout/zero_std/count_0.0': 16, 'rollout/repetition_frac': 0.0, 'rollout/truncated_ratio': 0.0, 'perf/rollout_time': 30.754957914352417, 'perf/longest_sample_tokens_per_sec': 0.8453921501829329, 'perf/longest_effective_sample_tokens_per_sec': 0.8453921501829329}
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:11] timer.py:32 - Timer train_wait end (elapsed: 31.5s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:11] timer.py:24 - Timer train start
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-9 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-9 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 9 plus 9. Let me[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-9 turn=1 prompt_tokens=18 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-9 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-9 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-9 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-9 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-9 turn=2 prompt_tokens=34 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:620 - [OpenClaw] session=real-test-9 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-9 index=16 score=0.0 exclude=True prompt_len=34 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-9 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-9 index=17 score=0.0 exclude=False prompt_len=18 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-10 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-10 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking "What is 10+10? Brief answer[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:11] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-10 turn=1 prompt_tokens=20 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-10 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-10 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-10 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-10 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-10 turn=2 prompt_tokens=36 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:620 - [OpenClaw] session=real-test-10 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-10 index=18 score=0.0 exclude=True prompt_len=36 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-10 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-10 index=19 score=0.0 exclude=False prompt_len=20 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-11 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-11 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 11 plus 11.[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-11 turn=1 prompt_tokens=20 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-11 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-11 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-11 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-11 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-11 turn=2 prompt_tokens=36 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:620 - [OpenClaw] session=real-test-11 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-11 index=20 score=0.0 exclude=True prompt_len=36 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-11 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-11 index=21 score=0.0 exclude=False prompt_len=20 response_len=26
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:12] timer.py:24 - Timer ref_log_probs start
+[36m(FSDPTrainRayActor pid=112520)[0m ref_log_probs:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-12 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-12 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 12 plus 12.[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:12] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-12 turn=1 prompt_tokens=20 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-12 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-12 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-12 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-12 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-12 turn=2 prompt_tokens=36 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:620 - [OpenClaw] session=real-test-12 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-12 index=22 score=0.0 exclude=True prompt_len=36 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-12 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-12 index=23 score=0.0 exclude=False prompt_len=20 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-13 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-13 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the sum of 13 and 13.[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-13 turn=1 prompt_tokens=20 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-13 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-13 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-13 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-13 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-13 turn=2 prompt_tokens=36 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:620 - [OpenClaw] session=real-test-13 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-13 index=24 score=0.0 exclude=True prompt_len=36 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-13 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-13 index=25 score=0.0 exclude=False prompt_len=20 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-14 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-14 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 14 plus 14.[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-14 turn=1 prompt_tokens=20 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-14 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-14 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-14 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-14 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-14 turn=2 prompt_tokens=36 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:620 - [OpenClaw] session=real-test-14 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-14 index=26 score=0.0 exclude=True prompt_len=36 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-14 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:13] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-14 index=27 score=0.0 exclude=False prompt_len=20 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-15 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-15 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 15 plus 15.[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-15 turn=1 prompt_tokens=20 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-15 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-15 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-15 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-15 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-15 turn=2 prompt_tokens=36 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:620 - [OpenClaw] session=real-test-15 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-15 index=28 score=0.0 exclude=True prompt_len=36 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-15 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-15 index=29 score=0.0 exclude=False prompt_len=20 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-16 prompt_msgs=1[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-16 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user is asking for the answer to 16 plus 16.[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-16 turn=1 prompt_tokens=20 response_tokens=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=real-test-16 prompt_msgs=3[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=real-test-16 thinking=0 chars, response:
+[36m(RolloutManager pid=112519)[0m <think>
+[36m(RolloutManager pid=112519)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=real-test-16 with next_state[0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:351 - [32m[OpenClaw] session=real-test-16 turn=1 next_state role=user len=16: Correct, thanks![0m
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:605 - [OpenClaw] MAIN session=real-test-16 turn=2 prompt_tokens=36 response_tokens=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:620 - [OpenClaw] session=real-test-16 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-16 index=30 score=0.0 exclude=True prompt_len=36 response_len=16
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:708 - [OpenClaw] background task failed: name '_build_prm_judge_prompt' is not defined
+[36m(RolloutManager pid=112519)[0m Traceback (most recent call last):
+[36m(RolloutManager pid=112519)[0m   File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/openclaw-rl/openclaw_api_server.py", line 456, in _prm_evaluate
+[36m(RolloutManager pid=112519)[0m     msgs = _build_prm_judge_prompt(response_text, ns_text, ns_role)
+[36m(RolloutManager pid=112519)[0m            ^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutManager pid=112519)[0m NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:675 - [OpenClaw] promoting session=real-test-16 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=real-test-16 index=31 score=0.0 exclude=False prompt_len=20 response_len=26
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:417 - [OpenClaw] record file purged: /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record.jsonl
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] openclaw_api_server.py:417 - [OpenClaw] PRM record file purged: /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record_prm.jsonl
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] rollout.py:286 - Final collected 16 samples from rollout to train
+[36m(RolloutManager pid=112519)[0m [2026-10-10 23:45:14] rollout.py:1243 - perf 1: {'rollout/prm_eval_score': 0.0, 'rollout/response_len/mean': 13.0, 'rollout/response_len/median': 13.0, 'rollout/response_len/max': 26, 'rollout/response_len/min': 0, 'rollout/zero_std/count_0.0': 16, 'rollout/repetition_frac': 0.0, 'rollout/truncated_ratio': 0.0, 'perf/rollout_time': 3.677626609802246, 'perf/longest_sample_tokens_per_sec': 7.069776994407292, 'perf/longest_effective_sample_tokens_per_sec': 7.069776994407292}
+[36m(FSDPTrainRayActor pid=112520)[0m ref_log_probs: 100%|██████████| 1/1 [00:04<00:00,  4.27s/it]ref_log_probs: 100%|██████████| 1/1 [00:04<00:00,  4.27s/it]
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:16] timer.py:32 - Timer ref_log_probs end (elapsed: 4.3s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:17] timer.py:24 - Timer log_probs start
+[36m(FSDPTrainRayActor pid=112520)[0m log_probs:   0%|          | 0/1 [00:00<?, ?it/s][transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+[36m(FSDPTrainRayActor pid=112520)[0m log_probs: 100%|██████████| 1/1 [00:00<00:00,  4.20it/s]log_probs: 100%|██████████| 1/1 [00:00<00:00,  4.20it/s]
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:18] timer.py:32 - Timer log_probs end (elapsed: 0.2s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:18] actor.py:519 - rollout 0: {'rollout/raw_reward': 0.0, 'rollout/log_probs': -3.0361437797546387, 'rollout/rollout_log_probs': -0.0163185503333807, 'rollout/ref_log_probs': -3.6323623657226562, 'rollout/advantages': 0.0, 'rollout/returns': 0.0}
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:18] timer.py:24 - Timer actor_train start
+[36m(FSDPTrainRayActor pid=112520)[0m actor_train:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:25] actor.py:754 - , kl_loss: 2.2217, kl_penalty: 2.2217
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:25] actor.py:755 - step 0: {'train/loss': 2.2216925621032715, 'train/pg_loss': 0.0, 'train/pg_clipfrac': 0.0, 'train/ppo_kl': 0.0, 'train/entropy_loss': 0.0, 'train/train_rollout_logprob_abs_diff': 3.033324718475342, 'train/kl_loss': 2.2216925621032715, 'train/grad_norm': 7.617218017578125, 'train/lr-pg_0': 1e-05}
+[36m(FSDPTrainRayActor pid=112520)[0m actor_train: 100%|██████████| 1/1 [00:07<00:00,  7.54s/it]actor_train: 100%|██████████| 1/1 [00:07<00:00,  7.54s/it]
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:25] timer.py:32 - Timer actor_train end (elapsed: 7.5s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:25] timer.py:32 - Timer train end (elapsed: 14.6s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:25] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:25] train_metric_utils.py:44 - perf 0: {'perf/update_weights_time': 0.6328976154327393, 'perf/train_wait_time': 31.513424158096313, 'perf/ref_log_probs_time': 4.273736238479614, 'perf/log_probs_time': 0.2388930320739746, 'perf/actor_train_time': 7.538147926330566, 'perf/train_time': 14.596171617507935, 'perf/step_time': 46.10959577560425, 'perf/wait_time_ratio': 0.6834461163237847}
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:25] timer.py:24 - Timer update_weights start
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:26] timer.py:32 - Timer update_weights end (elapsed: 0.6s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:26] timer.py:32 - Timer train_wait end (elapsed: 0.6s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:26] timer.py:24 - Timer train start
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:28] timer.py:24 - Timer ref_log_probs start
+[36m(FSDPTrainRayActor pid=112520)[0m ref_log_probs:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=112520)[0m ref_log_probs: 100%|██████████| 1/1 [00:00<00:00,  2.88it/s]ref_log_probs: 100%|██████████| 1/1 [00:00<00:00,  2.87it/s]
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:28] timer.py:32 - Timer ref_log_probs end (elapsed: 0.3s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:29] timer.py:24 - Timer log_probs start
+[36m(FSDPTrainRayActor pid=112520)[0m log_probs:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=112520)[0m log_probs: 100%|██████████| 1/1 [00:00<00:00,  4.59it/s]log_probs: 100%|██████████| 1/1 [00:00<00:00,  4.58it/s]
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:30] timer.py:32 - Timer log_probs end (elapsed: 0.2s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:30] actor.py:519 - rollout 1: {'rollout/raw_reward': 0.0, 'rollout/log_probs': -3.1186821460723877, 'rollout/rollout_log_probs': -0.012689419090747833, 'rollout/ref_log_probs': -3.540144681930542, 'rollout/advantages': 0.0, 'rollout/returns': 0.0}
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:30] timer.py:24 - Timer actor_train start
+[36m(FSDPTrainRayActor pid=112520)[0m actor_train:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:30] actor.py:754 - , kl_loss: 2.4011, kl_penalty: 2.4011
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:30] actor.py:755 - step 1: {'train/loss': 2.401068925857544, 'train/pg_loss': 0.0, 'train/pg_clipfrac': 0.0, 'train/ppo_kl': 0.0, 'train/entropy_loss': 0.0, 'train/train_rollout_logprob_abs_diff': 3.116419553756714, 'train/kl_loss': 2.401068925857544, 'train/grad_norm': 8.593777656555176, 'train/lr-pg_0': 1e-05}
+[36m(FSDPTrainRayActor pid=112520)[0m actor_train: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s]actor_train: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s]
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:30] timer.py:32 - Timer actor_train end (elapsed: 0.8s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:30] timer.py:32 - Timer train end (elapsed: 4.6s)
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:30] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=112520)[0m [2026-10-10 23:45:30] train_metric_utils.py:44 - perf 1: {'perf/update_weights_time': 0.6070034503936768, 'perf/train_wait_time': 0.6125710010528564, 'perf/ref_log_probs_time': 0.34866881370544434, 'perf/log_probs_time': 0.21916890144348145, 'perf/actor_train_time': 0.7773396968841553, 'perf/train_time': 4.577934265136719, 'perf/step_time': 5.190505266189575, 'perf/wait_time_ratio': 0.11801760515360264}
+[36m(FSDPTrainRayActor pid=112520)[0m trainable params: 34,865,152 || all params: 1,755,440,128 || trainable%: 1.9861
+[36m(RolloutManager pid=112519)[0m [2m2026-10-10 15:44:32[0m [33m WARN[0m [2msmg::core::steps::worker::local::discover_metadata[0m[2m:[0m [2m/home/runner/work/sglang/sglang/src/core/steps/worker/local/discover_metadata.rs[0m[2m:[0m[2m64:[0m Endpoint '/server_info' returned 404, falling back to '/get_server_info' for backward compatibility. The '/get_server_info' endpoint is deprecated and will be removed in a future version. Please use '/server_info' instead.
+[36m(RolloutManager pid=112519)[0m [2m2026-10-10 15:44:32[0m [33m WARN[0m [2msmg::core::steps::worker::local::discover_metadata[0m[2m:[0m [2m/home/runner/work/sglang/sglang/src/core/steps/worker/local/discover_metadata.rs[0m[2m:[0m[2m64:[0m Endpoint '/model_info' returned 404, falling back to '/get_model_info' for backward compatibility. The '/get_model_info' endpoint is deprecated and will be removed in a future version. Please use '/model_info' instead.
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] submission resumed
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:41300 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:41310 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:41320 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57250 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57264 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57268 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57274 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57286 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57294 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57306 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57314 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57328 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57342 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57356 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57366 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57378 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] drained 16 groups in 29.48s
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] submission paused
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] prm_eval_score=0.0000 (n=16)
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] submission resumed
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57388 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57404 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57414 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57424 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57434 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57442 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57452 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57466 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57472 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57482 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57486 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57500 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57516 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57532 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57540 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m INFO:     127.0.0.1:57548 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] drained 16 groups in 3.68s
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] submission paused
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] prm_eval_score=0.0000 (n=16)
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] submission resumed
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=112519)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[33m(raylet)[0m Raylet is terminated. Termination is unexpected. Possible reasons include: (1) SIGKILL by the user or system OOM killer, (2) Invalid memory access from Raylet causing SIGSEGV or SIGBUS, (3) Other termination signals. Last 20 lines of the Raylet logs:
+    [state-dump] 	CoreWorkerService.grpc_client.KillActor - 1 total (0 active), Execution time: mean = 28.01ms, total = 28.01ms, Queueing time: mean = 0.00ms, max = -0.00ms, min = 9223372036854.78ms, total = 0.00ms
+    [state-dump] 	NodeManagerService.grpc_server.CommitBundleResources - 1 total (0 active), Execution time: mean = 0.36ms, total = 0.36ms, Queueing time: mean = 0.00ms, max = -0.00ms, min = 9223372036854.78ms, total = 0.00ms
+    [state-dump] 	ray::rpc::NodeInfoGcsService.grpc_client.RegisterNode.OnReplyReceived - 1 total (0 active), Execution time: mean = 0.59ms, total = 0.59ms, Queueing time: mean = 0.03ms, max = 0.03ms, min = 0.03ms, total = 0.03ms
+    [state-dump] 	WorkerPool.PopWorkerCallback - 1 total (0 active), Execution time: mean = 0.03ms, total = 0.03ms, Queueing time: mean = 0.02ms, max = 0.02ms, min = 0.02ms, total = 0.02ms
+    [state-dump] 	NodeManagerService.grpc_server.PrepareBundleResources.HandleRequestImpl - 1 total (0 active), Execution time: mean = 0.15ms, total = 0.15ms, Queueing time: mean = 0.03ms, max = 0.03ms, min = 0.03ms, total = 0.03ms
+    [state-dump] 	Subscriber.HandlePublishedMessage_GCS_JOB_CHANNEL - 1 total (0 active), Execution time: mean = 0.03ms, total = 0.03ms, Queueing time: mean = 0.13ms, max = 0.13ms, min = 0.13ms, total = 0.13ms
+    [state-dump] 	NodeManagerService.grpc_server.CommitBundleResources.HandleRequestImpl - 1 total (0 active), Execution time: mean = 0.17ms, total = 0.17ms, Queueing time: mean = 0.03ms, max = 0.03ms, min = 0.03ms, total = 0.03ms
+    [state-dump] 	NodeManagerService.grpc_server.KillLocalActor.HandleRequestImpl - 1 total (0 active), Execution time: mean = 0.71ms, total = 0.71ms, Queueing time: mean = 0.04ms, max = 0.04ms, min = 0.04ms, total = 0.04ms
+    [state-dump] DebugString() time ms: 1
+    [state-dump] 
+    [state-dump] 
+    [2026-10-10 23:51:32,481 W 110626 110687] (raylet) memory_monitor_utils.cc:437: Got negative used memory for cgroup -1, setting it to zero
+    [2026-10-10 23:51:37,486 W 110626 110687] (raylet) memory_monitor_utils.cc:437: Got negative used memory for cgroup -1, setting it to zero
+    [2026-10-10 23:51:42,491 W 110626 110687] (raylet) memory_monitor_utils.cc:437: Got negative used memory for cgroup -1, setting it to zero
+    [2026-10-10 23:51:47,496 W 110626 110687] (raylet) memory_monitor_utils.cc:437: Got negative used memory for cgroup -1, setting it to zero
+    [2026-10-10 23:51:52,501 W 110626 110687] (raylet) memory_monitor_utils.cc:437: Got negative used memory for cgroup -1, setting it to zero
+    [2026-10-10 23:51:57,506 W 110626 110687] (raylet) memory_monitor_utils.cc:437: Got negative used memory for cgroup -1, setting it to zero
+    [2026-10-10 23:52:02,511 W 110626 110687] (raylet) memory_monitor_utils.cc:437: Got negative used memory for cgroup -1, setting it to zero
+    [2026-10-10 23:52:07,517 W 110626 110687] (raylet) memory_monitor_utils.cc:437: Got negative used memory for cgroup -1, setting it to zero
+    [2026-10-10 23:52:12,522 W 110626 110687] (raylet) memory_monitor_utils.cc:437: Got negative used memory for cgroup -1, setting it to zero
+
+[2026-10-10 23:52:23,762 C 111009 111080] global_state_accessor.cc:250:  An unexpected system state has occurred. You have likely discovered a bug in Ray. Please report this issue at https://github.com/ray-project/ray/issues and we'll work with you to fix it. Check failed: status Status not OK: Unauthenticated: RPC error: WrongClusterID: Perhaps the client is accessing GCS after it has restarted. 
+*** StackTrace Information ***
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0x182c6fa) [0x7e58e442c6fa] ray::operator<<()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(_ZN3ray6RayLogD1Ev+0x469) [0x7e58e442ed29] ray::RayLog::~RayLog()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0xdfb9a0) [0x7e58e39fb9a0] ray::gcs::GlobalStateAccessor::AddWorkerInfo()::{lambda()#1}::operator()()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0xe12925) [0x7e58e3a12925] std::_Function_handler<>::_M_invoke()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(_ZZZN3ray3rpc19RetryableGrpcClient20RetryableGrpcRequest6CreateINS0_20WorkerInfoGcsServiceENS0_20AddWorkerInfoRequestENS0_18AddWorkerInfoReplyEEESt10shared_ptrIS2_ESt8weak_ptrIS1_EMNT_4StubEFSt10unique_ptrIN4grpc25ClientAsyncResponseReaderIT1_EESt14default_deleteISH_EEPNSE_13ClientContextERKT0_PNSE_15CompletionQueueEES7_INS0_10GrpcClientISB_EEESsSN_St8functionIFvRKNS_6StatusEOSG_EElENKUlS8_E_clES8_ENKUlS10_OS6_E_clES10_S15_+0x91) [0x7e58e3a29061] ray::rpc::RetryableGrpcClient::RetryableGrpcRequest::Create<>()::{lambda()#1}::operator()()::{lambda()#1}::operator()()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(_ZN3ray3rpc14ClientCallImplINS0_18AddWorkerInfoReplyEE15OnReplyReceivedEv+0x65) [0x7e58e3a10225] ray::rpc::ClientCallImpl<>::OnReplyReceived()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(_ZNSt17_Function_handlerIFvvEZN3ray3rpc17ClientCallManager29PollEventsFromCompletionQueueEiEUlvE_E9_M_invokeERKSt9_Any_data+0x15) [0x7e58e373e0f5] std::_Function_handler<>::_M_invoke()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0x1168c6b) [0x7e58e3d68c6b] EventTracker::RecordExecution()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0x115dedb) [0x7e58e3d5dedb] std::_Function_handler<>::_M_invoke()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0xc45cfb) [0x7e58e3845cfb] boost::asio::detail::executor_op<>::do_complete()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0x16c579b) [0x7e58e42c579b] boost::asio::detail::scheduler::do_run_one()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0x16c7139) [0x7e58e42c7139] boost::asio::detail::scheduler::run()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0x16c7842) [0x7e58e42c7842] boost::asio::io_context::run()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0xdfb842) [0x7e58e39fb842] std::thread::_State_impl<>::_M_run()
+/home/wangwei/.local/lib/python3.13/site-packages/ray/_raylet.so(+0x1865f10) [0x7e58e4465f10] execute_native_thread_routine
+/lib/x86_64-linux-gnu/libc.so.6(+0x9cb84) [0x7e58fbc9cb84]
+/lib/x86_64-linux-gnu/libc.so.6(+0x129ecc) [0x7e58fbd29ecc]
+

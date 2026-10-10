@@ -250,3 +250,264 @@ GPU:       1x RTX 3090 (24GB), vLLM 占 ~20GB (32K context)
 问题 10-12: OpenClaw 配置 + context + timeout
   → 改 openclaw.json + 加大 context + 加 tool-call-parser
 ```
+
+---
+
+## Phase 2: Directive Signal 实现
+
+### 问题 1: PRM 需要同时输出 score 和 hint
+
+**现象**: 论文要求 PRM 输出 evaluative score + directive hint，但当前实现只输出 score。
+
+**根因**: `_build_prm_judge_prompt` 只包含评分指令，缺少 hint 提取指令。
+
+**解决方案**: 
+- 创建 `_build_prm_dual_prompt` 包含双重任务指令
+- 添加 `_parse_prm_dual_output` 解析 score + hint
+- 修改输出格式要求: `\boxed{score}` + 可选 `[HINT_START]hint[HINT_END]`
+
+**状态**: ✅ 测试通过，待集成到 openclaw_api_server.py
+
+### 问题 2: Hint 质量需要严格控制
+
+**现象**: 随机 hint 会导致训练不稳定（论文 Figure 7）。
+
+**解决方案**: 
+- Hint 必须是 ONE short sentence
+- Hint 不能直接引用 next state 内容
+- Hint 不能包含具体数字/代码
+- 只在 score=-1 且存在有意义纠正时提取
+
+**状态**: ✅ 已在 prompt 规则中体现
+
+---
+
+---
+
+## Phase 2 实施：2026-10-10
+
+### 问题 13: `args.prompt_data` is None TypeError
+
+**现象**: RolloutManager 初始化时报错 `TypeError: expected string or bytes-like object, got 'NoneType'`
+
+**原因**: 手动构造的训练命令缺少 `--disable-rollout-global-dataset` 参数。没有这个参数，Slime 会尝试加载 prompt 数据集，但 `args.prompt_data` 是 None。
+
+**解决**: 确保训练命令包含 `--disable-rollout-global-dataset`。OpenClaw 的 rollout 从 API 请求收集数据，不需要静态数据集。
+
+**状态**: ✅ 已修复
+
+---
+
+### 问题 14: `--rotary-base` 参数不识别
+
+**现象**: 训练启动失败 `error: unrecognized arguments: --rotary-base 1000000`
+
+**原因**: 当前版本的 Slime 不支持 `--rotary-base` 参数。这个参数可能是旧版本或 Megatron 后端的参数。
+
+**解决**: 从训练命令中删除 `--rotary-base`。Qwen3 模型的 rotary embedding base 已经在模型配置中定义，不需要额外指定。
+
+**状态**: ✅ 已修复
+
+---
+
+### 问题 15: Ray Dashboard 无法连接
+
+**现象**: `ray job submit` 报 `ConnectionError: Failed to connect to Ray at address: http://127.0.0.1:8265`
+
+**原因**: Ray Dashboard 进程启动了但没有绑定到 8265 端口。可能是代理干扰或启动延迟。
+
+**解决**: 绕过 `ray job submit`，直接运行 `train_async.py`。脚本会自动连接到现有的 Ray 集群（通过 `RAY_ADDRESS` 环境变量）。
+
+```bash
+export RAY_ADDRESS="192.168.3.4:6380"
+export RAY_AUTH_MODE=disabled
+/usr/bin/python3.13 train_async.py ...
+```
+
+**状态**: ✅ 已修复
+
+---
+
+### 问题 16: SGLang Router 没有注册的 Worker（核心问题）
+
+**现象**: API 请求返回 `503 Service Unavailable: No available workers (all circuits open or unhealthy)`
+
+**原因**: 在 external mode 下，`SGLangEngine._init_external()` 方法只做了健康检查，但**没有向 Router 注册 worker**。Router 启动时 `worker_urls=[]`，没有可用的后端。
+
+**根因**: 代码 bug — `_init_normal()` 有 worker 注册逻辑，但 `_init_external()` 遗漏了。
+
+**解决**: 在 `slime/backends/sglang_utils/sglang_engine.py` 的 `_init_external()` 方法中添加 worker 注册：
+
+```python
+def _init_external(self, expect_server_args, external_engine_need_check_fields):
+    # ... health check code ...
+    
+    # Register external engine with the router so it receives requests
+    if self.node_rank == 0 and self.router_ip and self.router_port:
+        try:
+            if parse(sglang_router.__version__) <= parse("0.2.1") or self.args.use_slime_router:
+                response = requests.post(
+                    f"http://{self.router_ip}:{self.router_port}/add_worker?url=http://{self.server_host}:{self.server_port}"
+                )
+            else:
+                payload = {
+                    "url": f"http://{self.server_host}:{self.server_port}",
+                    "worker_type": self.worker_type,
+                }
+                response = requests.post(
+                    f"http://{self.router_ip}:{self.router_port}/workers",
+                    json=payload,
+                )
+            response.raise_for_status()
+            logger.info(f"External engine registered with router at {self.router_ip}:{self.router_port}")
+        except Exception as e:
+            logger.warning(f"Failed to register external engine with router: {e}")
+```
+
+**验证**: Router 现在显示已注册的 worker：
+```json
+{"workers":[{"url":"http://127.0.0.1:30001","is_healthy":true}],"total":1}
+```
+
+**状态**: ✅ 已修复（最小改动原则）
+
+---
+
+### 问题 17: 所有样本的 Reward 为 0
+
+**现象**: 训练日志显示 `score=0.0 exclude=True`，`rollout/zero_std/count_0.0: 16`，`train/loss: 0.0`
+
+**原因**: 训练命令没有启用 PRM（Process Reward Model）。没有 `--prm-enable` 参数，`openclaw_api_server.py` 的 `_prm_enabled` 为 False，PRM 评分被跳过，所有样本的 reward 默认为 0.0。
+
+**影响**: GRPO 算法需要 reward 方差来计算 advantage。所有 reward 都是 0 时，advantage 为 0，loss 为 0，梯度为 0，模型不学习任何东西。
+
+**解决**: 需要在训练命令中添加 PRM 参数：
+```bash
+--prm-enable \
+--prm-num-gpus 0 \
+--prm-router-ip 127.0.0.1 \
+--prm-router-port 30001 \
+--prm-m 3 \
+--prm-temperature 0.6 \
+--prm-max-new-tokens 256
+```
+
+**状态**: ❌ 待修复（需要重启训练）
+
+---
+
+### 当前状态总结
+
+**已完成**:
+- ✅ 训练循环完整运行
+- ✅ 数据收集工作正常（16 samples per rollout）
+- ✅ 完整的请求链路：Client → :30000 (API Server) → :3849 (Router) → :30001 (Adapter) → :30010 (vLLM)
+- ✅ External engine 注册修复
+- ✅ 所有启动错误已解决
+
+**待完成**:
+- ❌ 启用 PRM 获得真实的 reward 信号（+1/-1/0）
+- ❌ Phase 2: Directive signal（hint 提取）
+- ❌ Phase 3: Hybrid RL（overlap-guided selection + OPD loss）
+- ❌ Phase 4: 真实对话测试
+
+**下一步**: 重启训练并启用 PRM，然后逐步实施 Phase 2-4。
+
+
+---
+
+## Phase 2 关键修复：PRM 评分链路打通 (2026-10-11 凌晨)
+
+### 问题 18: `_build_prm_judge_prompt` 未定义
+
+**现象**: `NameError: name '_build_prm_judge_prompt' is not defined. Did you mean: '_build_prm_dual_prompt'?`
+
+**原因**: 前一轮修改把函数从 `_build_prm_judge_prompt` 改名为 `_build_prm_dual_prompt`（支持双重输出），但 `_prm_evaluate` 中的调用没更新。
+
+**修复**: `sed -i 's/_build_prm_judge_prompt/_build_prm_dual_prompt/g' openclaw_api_server.py`
+
+**状态**: ✅ 已修复
+
+---
+
+### 问题 19: `_query_prm_once` 返回值数量不匹配
+
+**现象**: `ValueError: too many values to unpack (expected 2)`
+
+**原因**: `_query_prm_once` 被改为返回 3 个值 `(score, raw_text, hint)`，但：
+- 类型注解还是 `tuple[int | None, str]`（2 个值）
+- 错误分支 `return None, ""` 只返回 2 个值
+- 调用处 `for s, text in results:` 按 2 个值解包
+
+**修复** (3 处):
+1. 类型注解: `tuple[int | None, str]` → `tuple[int | None, str, str | None]`
+2. 错误分支: `return None, ""` → `return None, "", None`
+3. 解包: `for s, text in results:` → `for s, text, _h in results:`
+
+**状态**: ✅ 已修复
+
+---
+
+### 问题 20: OpenClaw 环境变量没传递到 RolloutManager
+
+**现象**: PRM 显示 enabled，但 record file 没初始化，`_buffer_record` 不执行，PRM 永远不被触发。
+
+**原因**: `RolloutManager` 是 Ray actor，运行在独立进程中。`placement_group.py` 的 `runtime_env` 没有传递 `OPENCLAW_RECORD_ENABLED`、`OPENCLAW_RECORD_FILE` 等变量。
+
+**修复**: 在 `create_rollout_manager` 的 `runtime_env` 中添加:
+```python
+"OPENCLAW_RECORD_ENABLED": os.environ.get("OPENCLAW_RECORD_ENABLED", ""),
+"OPENCLAW_RECORD_FILE": os.environ.get("OPENCLAW_RECORD_FILE", ""),
+"OPENCLAW_PRM_RECORD_FILE": os.environ.get("OPENCLAW_PRM_RECORD_FILE", ""),
+"SGLANG_API_KEY": os.environ.get("SGLANG_API_KEY", ""),
+"SERVED_MODEL_NAME": os.environ.get("SERVED_MODEL_NAME", ""),
+"HOST": os.environ.get("HOST", ""),
+"PORT": os.environ.get("PORT", ""),
+"PRM_M": os.environ.get("PRM_M", ""),
+```
+
+**状态**: ✅ 已修复
+
+---
+
+### 最终验证：PRM 评分 + 训练
+
+**PRM 评分结果** (m=3, 多数投票):
+```
+PRM session=test-1 votes=[1, 1, 1] → score=1.0
+PRM session=test-2 votes=[1, 1, 1] → score=1.0
+PRM session=test-3 votes=[1, 1, 1] → score=1.0
+```
+
+**训练指标** (Step 0):
+```
+train/loss:      1.86   ← 真实 loss
+train/pg_loss:  -0.44   ← GRPO 策略梯度（非零！）
+train/kl_loss:   2.30   ← KL 约束
+train/grad_norm: 8.16   ← 真实梯度
+rollout/raw_reward: 0.4375  ← 平均 reward
+rollout/advantages: 0.4375  ← 非零 advantage
+zero_std/count_0.0: 9       ← 9 个 reward=0
+zero_std/count_1.0: 7       ← 7 个 reward=+1
+```
+
+**结论**: 完整的 RL 训练链路已打通！
+- ✅ 对话收集 → PRM 评分 → GRPO advantage → 模型更新
+- ✅ 模型在真实学习（非零梯度、非零 policy gradient loss）
+
+---
+
+### 今天总共修改的文件 (4 个，最小改动原则)
+
+| # | 文件 | 改动量 | 内容 |
+|---|------|--------|------|
+| 1 | `slime/backends/sglang_utils/sglang_engine.py` | +15 行 | `_init_external()` 添加 worker 注册 |
+| 2 | `slime/ray/placement_group.py` | +8 行 | `runtime_env` 添加 OpenClaw 环境变量 |
+| 3 | `openclaw-rl/openclaw_api_server.py` | ~5 行 | 函数名修复 + 返回值修复 |
+
+**总计约 30 行代码改动**，其中大部分是环境变量传递。核心逻辑修复只有：
+- Worker 注册（15 行）
+- 函数名 `_build_prm_judge_prompt` → `_build_prm_dual_prompt`（1 行）
+- 返回值从 2 个改为 3 个（3 行）
+- 解包从 2 个改为 3 个（1 行）
+

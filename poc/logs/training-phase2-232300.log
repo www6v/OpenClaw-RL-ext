@@ -1,0 +1,152 @@
+/usr/lib/python3/dist-packages/pytz/__init__.py:31: SyntaxWarning: invalid escape sequence '\s'
+  match = re.match("^#\s*version\s*([0-9a-z]*)\s*$", line)
+Traceback (most recent call last):
+  File "/home/wangwei/.local/lib/python3.13/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "/home/wangwei/.local/lib/python3.13/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/wangwei/.local/lib/python3.13/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/wangwei/.local/lib/python3.13/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "/home/wangwei/.local/lib/python3.13/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1141, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1085, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='127.0.0.1', port=8265): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/wangwei/.local/lib/python3.13/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "/home/wangwei/.local/lib/python3.13/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "/home/wangwei/.local/lib/python3.13/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8265): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8265): Failed to establish a new connection: [Errno 111] Connection refused"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/dashboard/modules/dashboard_sdk.py", line 283, in _check_connection_and_version_with_url
+    r = self._do_request("GET", url)
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/dashboard/modules/dashboard_sdk.py", line 326, in _do_request
+    response = requests.request(
+        method,
+    ...<6 lines>...
+        **kwargs,
+    )
+  File "/home/wangwei/.local/lib/python3.13/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/wangwei/.local/lib/python3.13/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/wangwei/.local/lib/python3.13/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8265): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8265): Failed to establish a new connection: [Errno 111] Connection refused"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/wangwei/.local/bin/ray", line 6, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/scripts/scripts.py", line 3013, in main
+    return cli()
+  File "/home/wangwei/.local/lib/python3.13/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+  File "/home/wangwei/.local/lib/python3.13/site-packages/click/core.py", line 2032, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/click/core.py", line 2032, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/dashboard/modules/job/cli_utils.py", line 54, in wrapper
+    return func(*args, **kwargs)
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/autoscaler/_private/cli_logger.py", line 812, in wrapper
+    return f(*args, **kwargs)
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/dashboard/modules/job/cli.py", line 303, in submit
+    client = _get_sdk_client(
+        address, create_cluster_if_needed=True, headers=headers, verify=verify
+    )
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/dashboard/modules/job/cli.py", line 35, in _get_sdk_client
+    client = JobSubmissionClient(
+        address,
+    ...<2 lines>...
+        verify=verify,
+    )
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/dashboard/modules/job/sdk.py", line 113, in __init__
+    self._check_connection_and_version(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        min_version="1.9",
+        ^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        "running Ray 1.9 or higher.",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/dashboard/modules/dashboard_sdk.py", line 269, in _check_connection_and_version
+    self._check_connection_and_version_with_url(min_version, version_error_message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/dashboard/modules/dashboard_sdk.py", line 300, in _check_connection_and_version_with_url
+    raise ConnectionError(
+        f"Failed to connect to Ray at address: {self._address}."
+    )
+ConnectionError: Failed to connect to Ray at address: http://127.0.0.1:8265.

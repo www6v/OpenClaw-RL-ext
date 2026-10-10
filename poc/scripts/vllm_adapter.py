@@ -178,11 +178,12 @@ if __name__ == "__main__":
     # 自动检测 vLLM 注册的模型名
     try:
         import httpx as _httpx
-        _r = _httpx.get(f"{VLLM_URL}/v1/models", timeout=10, proxies={})
-        _models = _r.json().get("data", [])
-        if _models:
-            VLLM_MODEL_ID = _models[0]["id"]
-            logger.info(f"vLLM model detected: {VLLM_MODEL_ID}")
+        with _httpx.Client(timeout=10, trust_env=False) as _client:
+            _r = _client.get(f"{VLLM_URL}/v1/models")
+            _models = _r.json().get("data", [])
+            if _models:
+                VLLM_MODEL_ID = _models[0]["id"]
+                logger.info(f"vLLM model detected: {VLLM_MODEL_ID}")
     except Exception as e:
         logger.warning(f"Could not detect vLLM model: {e}")
 
