@@ -1,0 +1,31 @@
+{
+  "_comment": "OpenClaw 配置 — 放到 124.221.28.203 的 openclaw.json 中",
+  "_usage": "将 models.providers 部分合并到你的 openclaw.json 配置文件中",
+  "_note": "推理后端使用 vLLM (替代 sglang, 因 RTX 3090 SM86 不兼容 sgl-kernel)",
+
+  "models": {
+    "providers": {
+      "openclaw-rl-poc": {
+        "baseUrl": "http://<训练机IP>:30000/v1",
+        "apiKey": "",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "/home/wangwei/models/Qwen3-1.7B",
+            "name": "Qwen3 1.7B (OpenClaw-RL POC)",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 8192,
+            "maxTokens": 4096
+          }
+        ]
+      }
+    }
+  }
+}

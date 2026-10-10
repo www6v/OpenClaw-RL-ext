@@ -1,0 +1,303 @@
+(APIServer pid=1689779) INFO 10-09 22:50:53 [api_utils.py:333] 
+(APIServer pid=1689779) INFO 10-09 22:50:53 [api_utils.py:333]        █     █     █▄   ▄█
+(APIServer pid=1689779) INFO 10-09 22:50:53 [api_utils.py:333]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.28.0
+(APIServer pid=1689779) INFO 10-09 22:50:53 [api_utils.py:333]   █▄█▀ █     █     █     █  model   /home/wangwei/models/Qwen3-1.7B
+(APIServer pid=1689779) INFO 10-09 22:50:53 [api_utils.py:333]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=1689779) INFO 10-09 22:50:53 [api_utils.py:333] 
+(APIServer pid=1689779) INFO 10-09 22:50:53 [api_utils.py:272] non-default args: {'enable_auto_tool_choice': True, 'tool_call_parser': 'hermes', 'host': '0.0.0.0', 'port': 30000, 'model': '/home/wangwei/models/Qwen3-1.7B', 'max_model_len': 16384, 'gpu_memory_utilization': 0.5}
+(APIServer pid=1689779) INFO 10-09 22:50:53 [model.py:672] Resolved architecture: Qwen3ForCausalLM
+(APIServer pid=1689779) INFO 10-09 22:50:53 [model.py:1965] Using max model len 16384
+(APIServer pid=1689779) INFO 10-09 22:50:53 [kernel.py:308] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(APIServer pid=1689779) /usr/lib/python3/dist-packages/pytz/__init__.py:31: SyntaxWarning: invalid escape sequence '\s'
+(APIServer pid=1689779)   match = re.match("^#\s*version\s*([0-9a-z]*)\s*$", line)
+(EngineCore pid=1689918) INFO 10-09 22:51:06 [core.py:122] Initializing a V1 LLM engine (v0.28.0) with config: model='/home/wangwei/models/Qwen3-1.7B', speculative_config=None, tokenizer='/home/wangwei/models/Qwen3-1.7B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=16384, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=/home/wangwei/models/Qwen3-1.7B, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::qwen_gdn_attention_core', 'vllm::qwen_gdn_attention_core_fused_norm_packed', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::hpc_rope_norm_forward', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 512, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=1689918) /usr/lib/python3/dist-packages/pytz/__init__.py:31: SyntaxWarning: invalid escape sequence '\s'
+(EngineCore pid=1689918)   match = re.match("^#\s*version\s*([0-9a-z]*)\s*$", line)
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408] Module deep_ep was found but failed to import
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408] Traceback (most recent call last):
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]   File "/home/wangwei/.local/lib/python3.13/site-packages/vllm/utils/import_utils.py", line 406, in _has_module
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]     importlib.import_module(module_name)
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]     return _bootstrap._gcd_import(name[level:], package, level)
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]   File "/home/wangwei/.local/lib/python3.13/site-packages/deep_ep/__init__.py", line 5, in <module>
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]     _check_prerequisites(expected_cuda_major=_EXPECTED_CUDA_MAJOR)
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]   File "/home/wangwei/.local/lib/python3.13/site-packages/deep_ep/prerequisites.py", line 35, in check_prerequisites
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]     raise _failure(
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]         f"This wheel requires CUDA {expected_cuda_major}, but PyTorch uses CUDA {torch_cuda_major}"
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408]     )
+(EngineCore pid=1689918) WARNING 10-09 22:51:07 [import_utils.py:408] ImportError: This wheel requires CUDA 13, but PyTorch uses CUDA 12. See https://github.com/sgl-project/DeepEP/tree/sgl-deepep-packaging/sgl_deep_ep for host prerequisites
+(EngineCore pid=1689918) INFO 10-09 22:51:07 [parallel_state.py:1638] world_size=1 rank=0 local_rank=0 distributed_init_method=file:///tmp/vllm_dist_95c47c66bfce4bb584a7f1d5c93c09a8 backend=nccl
+(EngineCore pid=1689918) INFO 10-09 22:51:07 [parallel_state.py:1982] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=1689918) INFO 10-09 22:51:07 [gpu_worker.py:396] Using V2 Model Runner
+(EngineCore pid=1689918) INFO 10-09 22:51:08 [model_runner.py:358] Loading model from scratch...
+(EngineCore pid=1689918) INFO 10-09 22:51:09 [cuda.py:486] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=1689918) INFO 10-09 22:51:09 [flash_attn.py:866] Using FlashAttention version 2
+(EngineCore pid=1689918) INFO 10-09 22:51:10 [weight_utils.py:858] Filesystem type for checkpoints: EXT4. Checkpoint size: 3.78 GiB. Available RAM: 20.80 GiB.
+(EngineCore pid=1689918) INFO 10-09 22:51:10 [weight_utils.py:881] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=1689918) Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+(EngineCore pid=1689918) Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  1.01it/s]
+(EngineCore pid=1689918) Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.01it/s]
+(EngineCore pid=1689918) 
+(EngineCore pid=1689918) INFO 10-09 22:51:11 [default_loader.py:430] Loading weights took 1.07 seconds
+(EngineCore pid=1689918) INFO 10-09 22:51:11 [model_runner.py:380] Model loading took 3.22 GiB memory and 3.409270 seconds
+(EngineCore pid=1689918) INFO 10-09 22:51:11 [topk_topp_sampler.py:62] Using FlashInfer for top-p & top-k sampling.
+(EngineCore pid=1689918) INFO 10-09 22:51:14 [caching.py:343] reconstructed serializable fn from standalone compile artifacts. num_artifacts=3 num_submods=29
+(EngineCore pid=1689918) INFO 10-09 22:51:14 [decorators.py:311] Directly load AOT compilation from path /home/wangwei/.cache/vllm/torch_compile_cache/torch_aot_compile/9688555f0ff9676e883f6a7f4f489d22c43f8c0da6eedd369814b4395b613a12/rank_0_0/model
+(EngineCore pid=1689918) INFO 10-09 22:51:14 [monitor.py:53] torch.compile took 0.30 s in total
+(EngineCore pid=1689918) INFO 10-09 22:51:14 [monitor.py:81] Initial profiling/warmup run took 0.20 s
+(EngineCore pid=1689918) INFO 10-09 22:51:15 [gpu_worker.py:578] Available KV cache memory: 8.16 GiB
+(EngineCore pid=1689918) INFO 10-09 22:51:15 [kv_cache_utils.py:1869] GPU KV cache size: 76,368 tokens, Maximum concurrency for 16,384 tokens per request: 4.66x
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408] Module deep_gemm was found but failed to import
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408] Traceback (most recent call last):
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]   File "/home/wangwei/.local/lib/python3.13/site-packages/vllm/utils/import_utils.py", line 406, in _has_module
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]     importlib.import_module(module_name)
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]     return _bootstrap._gcd_import(name[level:], package, level)
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]   File "/home/wangwei/.local/lib/python3.13/site-packages/deep_gemm/__init__.py", line 16, in <module>
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]     from . import deep_gemm_cpp  # noqa: F401  # Registers ops into torch.ops without touching CUDA
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408]     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=1689918) WARNING 10-09 22:51:15 [import_utils.py:408] ImportError: /home/wangwei/.local/lib/python3.13/site-packages/deep_gemm/deep_gemm_cpp.abi3.so: undefined symbol: _ZNR5torch7Library4_defEON3c1014FunctionSchemaEPNS1_12OperatorNameERKSt6vectorIN2at3TagESaIS8_EENS_17_RegisterOrVerifyE
+(EngineCore pid=1689918) Capturing CUDA graphs (PIECEWISE):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (PIECEWISE):   4%|▍         | 2/51 [00:00<00:03, 12.62it/s]Capturing CUDA graphs (PIECEWISE):   8%|▊         | 4/51 [00:00<00:03, 13.20it/s]Capturing CUDA graphs (PIECEWISE):  12%|█▏        | 6/51 [00:00<00:03, 12.97it/s]Capturing CUDA graphs (PIECEWISE):  16%|█▌        | 8/51 [00:00<00:03, 13.30it/s]Capturing CUDA graphs (PIECEWISE):  20%|█▉        | 10/51 [00:00<00:02, 13.76it/s]Capturing CUDA graphs (PIECEWISE):  24%|██▎       | 12/51 [00:00<00:02, 13.90it/s]Capturing CUDA graphs (PIECEWISE):  27%|██▋       | 14/51 [00:01<00:02, 13.99it/s]Capturing CUDA graphs (PIECEWISE):  31%|███▏      | 16/51 [00:01<00:02, 14.06it/s]Capturing CUDA graphs (PIECEWISE):  35%|███▌      | 18/51 [00:01<00:02, 14.44it/s]Capturing CUDA graphs (PIECEWISE):  39%|███▉      | 20/51 [00:01<00:02, 15.15it/s]Capturing CUDA graphs (PIECEWISE):  43%|████▎     | 22/51 [00:01<00:01, 15.68it/s]Capturing CUDA graphs (PIECEWISE):  47%|████▋     | 24/51 [00:01<00:01, 16.19it/s]Capturing CUDA graphs (PIECEWISE):  51%|█████     | 26/51 [00:01<00:01, 16.42it/s]Capturing CUDA graphs (PIECEWISE):  55%|█████▍    | 28/51 [00:01<00:01, 16.67it/s]Capturing CUDA graphs (PIECEWISE):  59%|█████▉    | 30/51 [00:02<00:01, 16.52it/s]Capturing CUDA graphs (PIECEWISE):  63%|██████▎   | 32/51 [00:02<00:01, 16.24it/s]Capturing CUDA graphs (PIECEWISE):  67%|██████▋   | 34/51 [00:02<00:01, 16.52it/s]Capturing CUDA graphs (PIECEWISE):  71%|███████   | 36/51 [00:02<00:00, 16.69it/s]Capturing CUDA graphs (PIECEWISE):  75%|███████▍  | 38/51 [00:02<00:00, 16.74it/s]Capturing CUDA graphs (PIECEWISE):  78%|███████▊  | 40/51 [00:02<00:00, 16.92it/s]Capturing CUDA graphs (PIECEWISE):  82%|████████▏ | 42/51 [00:02<00:00, 16.97it/s]Capturing CUDA graphs (PIECEWISE):  86%|████████▋ | 44/51 [00:02<00:00, 17.01it/s]Capturing CUDA graphs (PIECEWISE):  90%|█████████ | 46/51 [00:02<00:00, 17.05it/s]Capturing CUDA graphs (PIECEWISE):  94%|█████████▍| 48/51 [00:03<00:00, 17.33it/s]Capturing CUDA graphs (PIECEWISE):  98%|█████████▊| 50/51 [00:03<00:00, 17.50it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:03<00:00, 15.75it/s]
+(EngineCore pid=1689918) Capturing CUDA graphs (FULL):   0%|          | 0/35 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):   9%|▊         | 3/35 [00:00<00:01, 23.43it/s]Capturing CUDA graphs (FULL):  17%|█▋        | 6/35 [00:00<00:01, 23.83it/s]Capturing CUDA graphs (FULL):  26%|██▌       | 9/35 [00:00<00:01, 24.51it/s]Capturing CUDA graphs (FULL):  34%|███▍      | 12/35 [00:00<00:00, 24.77it/s]Capturing CUDA graphs (FULL):  43%|████▎     | 15/35 [00:00<00:00, 25.08it/s]Capturing CUDA graphs (FULL):  51%|█████▏    | 18/35 [00:00<00:00, 25.22it/s]Capturing CUDA graphs (FULL):  60%|██████    | 21/35 [00:00<00:00, 25.11it/s]Capturing CUDA graphs (FULL):  69%|██████▊   | 24/35 [00:00<00:00, 25.10it/s]Capturing CUDA graphs (FULL):  77%|███████▋  | 27/35 [00:01<00:00, 25.30it/s]Capturing CUDA graphs (FULL):  86%|████████▌ | 30/35 [00:01<00:00, 25.53it/s]Capturing CUDA graphs (FULL):  94%|█████████▍| 33/35 [00:01<00:00, 25.31it/s]Capturing CUDA graphs (FULL): 100%|██████████| 35/35 [00:01<00:00, 25.17it/s]
+(EngineCore pid=1689918) INFO 10-09 22:51:20 [model_runner.py:906] Graph capturing finished in 5 secs, took 0.45 GiB
+(EngineCore pid=1689918) INFO 10-09 22:51:20 [gpu_worker.py:804] Free memory on device (22.97/23.56 GiB) on startup. Desired GPU memory utilization is (0.5, 11.78 GiB). Actual usage is 3.53 GiB for consumed memory (weights + non-torch), 0.09 GiB for peak activation, and 0.45 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=8117905920` (7.56 GiB) to fit into requested memory, or `--kv-cache-memory=20131408384` (18.75 GiB) to fully utilize gpu memory. Current kv cache memory in use is 8.16 GiB.
+(EngineCore pid=1689918) INFO 10-09 22:51:21 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(EngineCore pid=1689918) INFO 10-09 22:51:22 [torch_utils.py:262] Reducing Torch threads from 14 to 1 for serving. Set OMP_NUM_THREADS in the external environment to override.
+(EngineCore pid=1689918) INFO 10-09 22:51:22 [core.py:347] init engine (profile, create kv cache, warmup model) took 10.30 s (compilation: 0.30 s)
+(EngineCore pid=1689918) INFO 10-09 22:51:22 [kernel.py:308] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(APIServer pid=1689779) INFO 10-09 22:51:22 [api_server.py:653] Supported tasks: ['generate']
+(APIServer pid=1689779) INFO 10-09 22:51:23 [parser_manager.py:58] "auto" tool choice has been enabled.
+(APIServer pid=1689779) INFO 10-09 22:51:23 [hf.py:551] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(APIServer pid=1689779) WARNING 10-09 22:51:23 [model.py:1713] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(APIServer pid=1689779) INFO 10-09 22:51:23 [api_server.py:657] Starting vLLM server on http://0.0.0.0:30000
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:51] Available routes are:
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /openapi.json, Methods: GET, HEAD
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /docs, Methods: GET, HEAD
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /redoc, Methods: GET, HEAD
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /load, Methods: GET
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /version, Methods: GET
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /health, Methods: GET
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /metrics, Methods: GET
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /tokenize, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /detokenize, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/models, Methods: GET
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /ping, Methods: GET
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /ping, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /invocations, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/chat/completions/batch, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/responses, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/completions, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/messages, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/messages/count_tokens, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /generative_scoring, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/chat/completions/render, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/completions/render, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/chat/completions/derender, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /v1/completions/derender, Methods: POST
+(APIServer pid=1689779) INFO 10-09 22:51:23 [launcher.py:60] Route: /inference/v1/generate, Methods: POST
+(APIServer pid=1689779) INFO:     Started server process [1689779]
+(APIServer pid=1689779) INFO:     Waiting for application startup.
+(APIServer pid=1689779) INFO:     Application startup complete.
+(APIServer pid=1689779) INFO:     127.0.0.1:40782 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40796 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40804 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:52604 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:52620 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:52624 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:52634 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:33314 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:33318 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:33330 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:33332 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:56098 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:56108 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:56110 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:56164 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:56170 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:56182 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:56194 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:38508 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:38516 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:38520 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:57478 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:57482 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:57484 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:57494 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:37564 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:37572 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:37576 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:48344 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:48348 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:48352 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:48356 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:37762 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:37772 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:37778 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:34244 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:34250 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:34260 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:41460 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:41470 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:41478 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:41488 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:58292 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:58306 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:58322 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:58316 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:58332 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:58348 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:58358 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:60064 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:60074 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:60076 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:48358 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:48360 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:48374 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:48386 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:42322 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:42332 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:42346 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:39116 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:39128 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:39144 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:47338 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:47340 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:47342 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:47346 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:44748 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:44760 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:44768 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:36176 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:36182 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:36196 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:36206 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51382 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51394 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51396 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40950 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40964 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40968 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40976 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:39392 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:39400 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:41158 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:33632 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:33634 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:34824 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:35742 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:35758 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:58116 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:41768 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:41778 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:35348 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:47662 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:60328 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:60344 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40066 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:59972 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:59984 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:44710 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:45844 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:45846 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:34146 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:33550 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:49118 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:49120 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:49130 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:49134 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51478 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51480 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:54520 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:54532 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:54544 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:54554 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:38504 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:38506 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:35270 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:35286 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:36920 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:36936 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:36940 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:36944 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:36660 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:36670 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:44614 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:44630 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:44646 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:44654 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51618 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51634 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:38734 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:38746 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51920 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51932 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51944 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:51952 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:55808 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:55818 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:46436 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:46450 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:46458 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:46468 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:57784 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:57792 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:49740 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:49748 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:49762 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:49778 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:35562 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:35578 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:55510 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:55526 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40336 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40344 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40356 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40360 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:59466 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:47652 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:47658 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:47674 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:47844 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:48682 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:42710 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:45390 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:37722 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:37730 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:37744 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:44072 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40824 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:40834 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:54860 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:56092 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:35886 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:49652 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:49662 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:35572 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:39204 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:39206 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1689779) INFO:     127.0.0.1:39826 - "GET /health HTTP/1.1" 200 OK
+/usr/lib/python3.13/multiprocessing/resource_tracker.py:479: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-z0_5qt6q'}
+  warnings.warn(
