@@ -1,0 +1,440 @@
+ERROR: ld.so: object '/tmp/libsgl_compat_all.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/tmp/libsgl_compat_all.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[2026-10-11 11:13:58] arguments.py:1713 - 🚧 🚧 🚧 FSDP backend is being rewritten, please use Megatron backend for better stability. 🚧 🚧 🚧
+2026-10-11 11:13:59,975	INFO worker.py:1686 -- Using address 192.168.3.4:6380 set in the environment variable RAY_ADDRESS
+2026-10-11 11:13:59,978	INFO worker.py:1836 -- Connecting to existing Ray cluster at address: 192.168.3.4:6380...
+2026-10-11 11:14:00,037	INFO worker.py:2033 -- Connected to Ray cluster.
+[33m(raylet)[0m ERROR: ld.so: object '/tmp/libsgl_compat_all.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:14:10] rollout.py:1180 - Launch router with args: RouterArgs(worker_urls=[], host='192.168.3.4', port=3900, mini_lb=False, pd_disaggregation=False, prefill_urls=[], decode_urls=[], policy='cache_aware', prefill_policy=None, decode_policy=None, worker_startup_timeout_secs=1800, worker_startup_check_interval=30, cache_threshold=0.3, balance_abs_threshold=10, balance_rel_threshold=1.2, eviction_interval_secs=60, max_tree_size=67108864, max_idle_secs=14400, assignment_mode='random', max_payload_size=536870912, bucket_adjust_interval_secs=5, dp_aware=False, enable_igw=False, api_key=None, log_dir=None, log_level='warn', service_discovery=False, selector={}, service_discovery_port=80, service_discovery_namespace=None, prefill_selector={}, decode_selector={}, bootstrap_port_annotation='sglang.ai/bootstrap-port', prometheus_port=4464, prometheus_host='0.0.0.0', prometheus_duration_buckets=None, request_id_headers=None, request_timeout_secs=14400, shutdown_grace_period_secs=180, max_concurrent_requests=-1, queue_size=100, queue_timeout_secs=60, rate_limit_tokens_per_second=None, cors_allowed_origins=[], retry_max_retries=5, retry_initial_backoff_ms=50, retry_max_backoff_ms=30000, retry_backoff_multiplier=1.5, retry_jitter_factor=0.2, disable_retries=False, health_failure_threshold=3, health_success_threshold=2, health_check_timeout_secs=5, health_check_interval_secs=60, health_check_endpoint='/health', disable_health_check=False, cb_failure_threshold=10, cb_success_threshold=3, cb_timeout_duration_secs=60, cb_window_duration_secs=120, disable_circuit_breaker=False, model_path=None, tokenizer_path=None, chat_template=None, tokenizer_cache_enable_l0=False, tokenizer_cache_l0_max_entries=10000, tokenizer_cache_enable_l1=False, tokenizer_cache_l1_max_memory=52428800, reasoning_parser=None, tool_call_parser=None, mcp_config_path=None, backend='sglang', history_backend='memory', oracle_wallet_path=None, oracle_tns_alias=None, oracle_connect_descriptor=None, oracle_username=None, oracle_password=None, oracle_pool_min=1, oracle_pool_max=16, oracle_pool_timeout_secs=30, postgres_db_url=None, postgres_pool_max=16, redis_url=None, redis_pool_max=16, redis_retention_days=30, client_cert_path=None, client_key_path=None, ca_cert_paths=[], server_cert_path=None, server_key_path=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', control_plane_api_keys=[], control_plane_audit_enabled=False, jwt_issuer=None, jwt_audience=None, jwt_jwks_uri=None, jwt_role_mapping={})
+[33m(raylet)[0m ERROR: ld.so: object '/tmp/libsgl_compat_all.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:11] train_actor.py:90 - Set NUMA affinity for GPU 0
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:11] actor.py:232 - [Rank 0] Device mesh (1D): world_size=1, dp_size=1
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:12] actor.py:256 - [Rank 0] tie_word_embeddings=True, loading full model to CPU on all ranks
+[36m(FSDPTrainRayActor pid=9099)[0m Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3376.67it/s]
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:14:13] rollout.py:1191 - Router launched at 192.168.3.4:3900
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:14:13] rollout.py:73 - import openclaw_rollout.generate_rollout_openclaw as generate_rollout function.
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:14:13] rollout.py:74 - import openclaw_rollout.generate_rollout_openclaw as eval_generate_rollout function.
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:14] actor.py:1028 - FSDP MixedPrecision Policy: param_dtype=torch.bfloat16, reduce_dtype=torch.float32
+[36m(pid=9493)[0m /home/wangwei/.local/lib/python3.13/site-packages/sglang/srt/environ.py:1956: UserWarning: Environment variable SGL_DISABLE_TP_MEMORY_INBALANCE_CHECK is deprecated, please use SGLANG_DISABLE_TP_MEMORY_INBALANCE_CHECK
+[36m(pid=9493)[0m   warnings.warn(
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:17] lr_scheduler.py:80 - > learning rate decay style: constant
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:17] checkpoint.py:97 - [FSDP] No tracker file at /home/wangwei/models/Qwen3-1.7B/latest_checkpointed_iteration.txt; skipping load.
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:17] actor.py:831 - [Rank 0] Creating separate ref model from /home/wangwei/models/Qwen3-1.7B
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:17] actor.py:256 - [Rank 0] tie_word_embeddings=True, loading full model to CPU on all ranks
+[33m(raylet)[0m ERROR: ld.so: object '/tmp/libsgl_compat_all.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.[32m [repeated 2x across cluster][0m
+[36m(FSDPTrainRayActor pid=9099)[0m Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=9099)[0m Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3427.51it/s]
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:18] actor.py:1028 - FSDP MixedPrecision Policy: param_dtype=torch.bfloat16, reduce_dtype=torch.float32
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:34] actor.py:848 - [Rank 0] Reference model created with FSDP2 CPUOffloadPolicy
+[33m(raylet)[0m ERROR: ld.so: object '/tmp/libsgl_compat_all.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.[32m [repeated 2x across cluster][0m
+[36m(FSDPTrainRayActor pid=9099)[0m /home/wangwei/.local/lib/python3.13/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+[36m(FSDPTrainRayActor pid=9099)[0m   return func(*args, **kwargs)
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:34] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:34] timer.py:24 - Timer update_weights start
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:14:35] timer.py:32 - Timer update_weights end (elapsed: 0.6s)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:14:36] openclaw_api_server.py:268 - [OpenClaw] PRM enabled: url=http://127.0.0.1:30001/generate m=3
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:14:36] openclaw_api_server.py:277 - [OpenClaw] record file initialized (cleared): /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record.jsonl
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:14:36] openclaw_api_server.py:286 - [OpenClaw] PRM record file initialized (cleared): /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record_prm.jsonl
+[36m(RolloutManager pid=9098)[0m INFO:     Started server process [9098]
+[36m(RolloutManager pid=9098)[0m INFO:     Waiting for application startup.
+[36m(RolloutManager pid=9098)[0m INFO:     Application startup complete.
+[36m(RolloutManager pid=9098)[0m INFO:     Uvicorn running on http://0.0.0.0:30000 (Press CTRL+C to quit)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:14:36] openclaw_api_server.py:751 - [OpenClaw] policy server ready
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:14:36] openclaw_api_server.py:763 - [OpenClaw] PRM server ready
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:14:44] openclaw_api_server.py:777 - [32m
+[36m(RolloutManager pid=9098)[0m ======================================================================
+[36m(RolloutManager pid=9098)[0m   [OpenClaw] your model is fired up and ready to roll
+[36m(RolloutManager pid=9098)[0m   proxy 0.0.0.0:30000 -> SGLang 192.168.3.4:3900
+[36m(RolloutManager pid=9098)[0m   PRM enabled: http://127.0.0.1:30001/generate (m=3)
+[36m(RolloutManager pid=9098)[0m ======================================================================
+[36m(RolloutManager pid=9098)[0m [0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-1 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-1 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking "What is 10+10?" Let me[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-1 turn=1 prompt_tokens=17 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-1 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-1 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=correct-1 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:351 - [32m[OpenClaw] session=correct-1 turn=1 next_state role=user len=8: Correct![0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-1 turn=2 prompt_tokens=31 response_tokens=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:620 - [OpenClaw] session=correct-1 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-1 index=0 score=0.0 exclude=True prompt_len=31 response_len=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-2 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-2 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking "What is 10+10?" Let me[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:39] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-2 turn=1 prompt_tokens=17 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-2 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-2 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=correct-2 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:351 - [32m[OpenClaw] session=correct-2 turn=1 next_state role=user len=8: Correct![0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-2 turn=2 prompt_tokens=31 response_tokens=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:620 - [OpenClaw] session=correct-2 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-2 index=1 score=0.0 exclude=True prompt_len=31 response_len=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-3 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-3 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking "What is 10+10?" Let me[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-3 turn=1 prompt_tokens=17 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=correct-1 turn=1 votes=[1, 1, 1] → score=1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:40] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-1 index=2 score=1.0 exclude=False prompt_len=17 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-3 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-3 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=correct-3 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:351 - [32m[OpenClaw] session=correct-3 turn=1 next_state role=user len=8: Correct![0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-3 turn=2 prompt_tokens=31 response_tokens=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:620 - [OpenClaw] session=correct-3 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-3 index=3 score=0.0 exclude=True prompt_len=31 response_len=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-4 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-4 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking "What is 10+10?" Let me[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-4 turn=1 prompt_tokens=17 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-4 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-4 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=correct-4 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:351 - [32m[OpenClaw] session=correct-4 turn=1 next_state role=user len=8: Correct![0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-4 turn=2 prompt_tokens=31 response_tokens=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:620 - [OpenClaw] session=correct-4 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-4 index=4 score=0.0 exclude=True prompt_len=31 response_len=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=correct-2 turn=1 votes=[1, 1, 1] → score=1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:41] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-2 index=5 score=1.0 exclude=False prompt_len=17 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-5 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-5 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking "What is 10+10?" Let me[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-5 turn=1 prompt_tokens=17 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=correct-3 turn=1 votes=[1, 1, 1] → score=1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-3 index=6 score=1.0 exclude=False prompt_len=17 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-5 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-5 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=correct-5 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:351 - [32m[OpenClaw] session=correct-5 turn=1 next_state role=user len=8: Correct![0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-5 turn=2 prompt_tokens=31 response_tokens=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:620 - [OpenClaw] session=correct-5 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:42] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-5 index=7 score=0.0 exclude=True prompt_len=31 response_len=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-6 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-6 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking "What is 10+10?" Let me[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-6 turn=1 prompt_tokens=17 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=correct-6 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=correct-6 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just said "Correct[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=correct-6 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:351 - [32m[OpenClaw] session=correct-6 turn=1 next_state role=user len=8: Correct![0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:605 - [OpenClaw] MAIN session=correct-6 turn=2 prompt_tokens=31 response_tokens=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:620 - [OpenClaw] session=correct-6 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-6 index=8 score=0.0 exclude=True prompt_len=31 response_len=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=correct-4 turn=1 votes=[1, 1, 1] → score=1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:43] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-4 index=9 score=1.0 exclude=False prompt_len=17 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-1 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-1 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking for the capital of France. I need to make sure I[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-1 turn=1 prompt_tokens=15 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-1 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-1 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just said "No, that is wrong! The capital of France is[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=wrong-1 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:351 - [32m[OpenClaw] session=wrong-1 turn=1 next_state role=user len=80: No, that is wrong! The capital of France is Paris, not London. Please try again.[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-1 turn=2 prompt_tokens=46 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:620 - [OpenClaw] session=wrong-1 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-1 index=10 score=0.0 exclude=True prompt_len=46 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=correct-5 turn=1 votes=[1, 1, 1] → score=1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-5 index=11 score=1.0 exclude=False prompt_len=17 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-2 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-2 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking for the capital of France. I need to make sure I[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:44] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-2 turn=1 prompt_tokens=15 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-2 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-2 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user said "No, that is wrong! The capital of France is Paris[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=wrong-2 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:351 - [32m[OpenClaw] session=wrong-2 turn=1 next_state role=user len=80: No, that is wrong! The capital of France is Paris, not London. Please try again.[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-2 turn=2 prompt_tokens=46 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:620 - [OpenClaw] session=wrong-2 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-2 index=12 score=0.0 exclude=True prompt_len=46 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=correct-6 turn=1 votes=[1, 1, 1] → score=1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=correct-6 index=13 score=1.0 exclude=False prompt_len=17 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-3 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-3 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking for the capital of France. I know that France is a[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:45] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-3 turn=1 prompt_tokens=15 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-3 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-3 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just said "No, that is wrong! The capital of France is[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=wrong-3 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:351 - [32m[OpenClaw] session=wrong-3 turn=1 next_state role=user len=80: No, that is wrong! The capital of France is Paris, not London. Please try again.[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-3 turn=2 prompt_tokens=46 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:620 - [OpenClaw] session=wrong-3 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-3 index=14 score=0.0 exclude=True prompt_len=46 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=wrong-1 turn=1 votes=[-1, -1, -1] → score=-1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-1 index=15 score=-1.0 exclude=False prompt_len=15 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:417 - [OpenClaw] record file purged: /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record.jsonl
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:417 - [OpenClaw] PRM record file purged: /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record_prm.jsonl
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] rollout.py:286 - Final collected 16 samples from rollout to train
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] rollout.py:1243 - perf 0: {'rollout/prm_eval_score': 0.3125, 'rollout/response_len/mean': 11.375, 'rollout/response_len/median': 0.0, 'rollout/response_len/max': 26, 'rollout/response_len/min': 0, 'rollout/zero_std/count_0.0': 9, 'rollout/zero_std/count_1.0': 6, 'rollout/zero_std/count_-1.0': 1, 'rollout/repetition_frac': 0.0, 'rollout/truncated_ratio': 0.0, 'perf/rollout_time': 191.4156551361084, 'perf/longest_sample_tokens_per_sec': 0.13583006040708837, 'perf/longest_effective_sample_tokens_per_sec': 0.13583006040708837}
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:17:46] timer.py:32 - Timer train_wait end (elapsed: 192.2s)
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:17:46] timer.py:24 - Timer train start
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-4 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-4 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking for the capital of France. Let me think. I know[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-4 turn=1 prompt_tokens=15 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-4 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-4 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user said "No, that is wrong! The capital of France is Paris[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=wrong-4 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:351 - [32m[OpenClaw] session=wrong-4 turn=1 next_state role=user len=80: No, that is wrong! The capital of France is Paris, not London. Please try again.[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-4 turn=2 prompt_tokens=46 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:620 - [OpenClaw] session=wrong-4 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:46] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-4 index=16 score=0.0 exclude=True prompt_len=46 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=wrong-2 turn=1 votes=[-1, -1, -1] → score=-1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-2 index=17 score=-1.0 exclude=False prompt_len=15 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-5 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-5 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking for the capital of France. I know that France is a[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-5 turn=1 prompt_tokens=15 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-5 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-5 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just said, "No, that is wrong! The capital of France[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=wrong-5 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:351 - [32m[OpenClaw] session=wrong-5 turn=1 next_state role=user len=80: No, that is wrong! The capital of France is Paris, not London. Please try again.[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-5 turn=2 prompt_tokens=46 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:620 - [OpenClaw] session=wrong-5 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:47] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-5 index=18 score=0.0 exclude=True prompt_len=46 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=wrong-3 turn=1 votes=[-1, -1, -1] → score=-1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-3 index=19 score=-1.0 exclude=False prompt_len=15 response_len=26
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:17:48] timer.py:24 - Timer ref_log_probs start
+[36m(FSDPTrainRayActor pid=9099)[0m ref_log_probs:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-6 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-6 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user is asking for the capital of France. I need to make sure I[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-6 turn=1 prompt_tokens=15 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=wrong-6 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=wrong-6 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just said "No, that is wrong! The capital of France is[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=wrong-6 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:351 - [32m[OpenClaw] session=wrong-6 turn=1 next_state role=user len=80: No, that is wrong! The capital of France is Paris, not London. Please try again.[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:605 - [OpenClaw] MAIN session=wrong-6 turn=2 prompt_tokens=46 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:620 - [OpenClaw] session=wrong-6 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:48] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-6 index=20 score=0.0 exclude=True prompt_len=46 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=wrong-4 turn=1 votes=[-1, -1, -1] → score=-1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-4 index=21 score=-1.0 exclude=False prompt_len=15 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=neutral-1 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=neutral-1 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user asked me to tell them about Python. Let me start by recalling what[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:605 - [OpenClaw] MAIN session=neutral-1 turn=1 prompt_tokens=13 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=neutral-1 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=neutral-1 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user asked, "What[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=neutral-1 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:351 - [32m[OpenClaw] session=neutral-1 turn=1 next_state role=user len=37: Interesting. Anyway, what time is it?[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:605 - [OpenClaw] MAIN session=neutral-1 turn=2 prompt_tokens=38 response_tokens=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:620 - [OpenClaw] session=neutral-1 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:49] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=neutral-1 index=22 score=0.0 exclude=True prompt_len=38 response_len=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=neutral-2 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=neutral-2 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user asked me to tell them about Python. Let me start by recalling what[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:605 - [OpenClaw] MAIN session=neutral-2 turn=1 prompt_tokens=13 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=wrong-5 turn=1 votes=[-1, -1, -1] → score=-1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-5 index=23 score=-1.0 exclude=False prompt_len=15 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=neutral-2 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=neutral-2 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user asked, "What[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=neutral-2 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:351 - [32m[OpenClaw] session=neutral-2 turn=1 next_state role=user len=37: Interesting. Anyway, what time is it?[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:605 - [OpenClaw] MAIN session=neutral-2 turn=2 prompt_tokens=38 response_tokens=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:620 - [OpenClaw] session=neutral-2 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=neutral-2 index=24 score=0.0 exclude=True prompt_len=38 response_len=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=neutral-3 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=neutral-3 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user asked me to tell them about Python. Let me start by recalling what[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:50] openclaw_api_server.py:605 - [OpenClaw] MAIN session=neutral-3 turn=1 prompt_tokens=13 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=wrong-6 turn=1 votes=[-1, 'fail', -1] → score=-1.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=wrong-6 index=25 score=-1.0 exclude=False prompt_len=15 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=neutral-3 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=neutral-3 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just asked, "[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=neutral-3 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:351 - [32m[OpenClaw] session=neutral-3 turn=1 next_state role=user len=37: Interesting. Anyway, what time is it?[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:605 - [OpenClaw] MAIN session=neutral-3 turn=2 prompt_tokens=38 response_tokens=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:620 - [OpenClaw] session=neutral-3 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=neutral-3 index=26 score=0.0 exclude=True prompt_len=38 response_len=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=neutral-1 turn=1 votes=[0, 'fail', 'fail'] → score=0.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:675 - [OpenClaw] promoting session=neutral-1 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=neutral-1 index=27 score=0.0 exclude=False prompt_len=13 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=neutral-4 prompt_msgs=1[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=neutral-4 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user asked me to tell them about Python. Let me start by recalling what[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:51] openclaw_api_server.py:605 - [OpenClaw] MAIN session=neutral-4 turn=1 prompt_tokens=13 response_tokens=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:52] openclaw_api_server.py:542 - [33m[OpenClaw] [main] session=neutral-4 prompt_msgs=3[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:52] openclaw_api_server.py:546 - [31m[OpenClaw] [main] session=neutral-4 thinking=0 chars, response:
+[36m(RolloutManager pid=9098)[0m <think>
+[36m(RolloutManager pid=9098)[0m Okay, the user just asked, "[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:52] openclaw_api_server.py:556 - [36m[OpenClaw] FLUSHING pending record for session=neutral-4 with next_state[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:52] openclaw_api_server.py:351 - [32m[OpenClaw] session=neutral-4 turn=1 next_state role=user len=37: Interesting. Anyway, what time is it?[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:52] openclaw_api_server.py:605 - [OpenClaw] MAIN session=neutral-4 turn=2 prompt_tokens=38 response_tokens=16
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:52] openclaw_api_server.py:620 - [OpenClaw] session=neutral-4 done → cleaned up (effective_samples=0)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:52] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=neutral-4 index=28 score=0.0 exclude=True prompt_len=38 response_len=16
+[36m(FSDPTrainRayActor pid=9099)[0m ERROR: ld.so: object '/tmp/libsgl_compat_all.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[36m(FSDPTrainRayActor pid=9099)[0m ERROR: ld.so: object '/tmp/libsgl_compat_all.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[36m(FSDPTrainRayActor pid=9099)[0m ref_log_probs: 100%|██████████| 1/1 [00:04<00:00,  4.06s/it]ref_log_probs: 100%|██████████| 1/1 [00:04<00:00,  4.06s/it]
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:17:52] timer.py:32 - Timer ref_log_probs end (elapsed: 4.1s)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:52] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=neutral-2 turn=1 votes=[0, 0, 0] → score=0.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:52] openclaw_api_server.py:675 - [OpenClaw] promoting session=neutral-2 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:52] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=neutral-2 index=29 score=0.0 exclude=False prompt_len=13 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:53] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=neutral-3 turn=1 votes=[0, 0, 0] → score=0.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:53] openclaw_api_server.py:675 - [OpenClaw] promoting session=neutral-3 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:53] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=neutral-3 index=30 score=0.0 exclude=False prompt_len=13 response_len=26
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:17:53] timer.py:24 - Timer log_probs start
+[36m(FSDPTrainRayActor pid=9099)[0m log_probs:   0%|          | 0/1 [00:00<?, ?it/s][transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+[36m(FSDPTrainRayActor pid=9099)[0m log_probs: 100%|██████████| 1/1 [00:00<00:00,  3.31it/s]log_probs: 100%|██████████| 1/1 [00:00<00:00,  3.31it/s]
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:17:54] timer.py:32 - Timer log_probs end (elapsed: 0.3s)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:54] openclaw_api_server.py:482 - [36m[OpenClaw] PRM session=neutral-4 turn=1 votes=[0, 0, 'fail'] → score=0.0 hint=None[0m
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:54] openclaw_api_server.py:675 - [OpenClaw] promoting session=neutral-4 turn with score=0 → loss_mask=1 (at-least-one guarantee)
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:54] openclaw_api_server.py:692 - [OpenClaw] submitted sample session=neutral-4 index=31 score=0.0 exclude=False prompt_len=13 response_len=26
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:54] openclaw_api_server.py:417 - [OpenClaw] record file purged: /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record.jsonl
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:54] openclaw_api_server.py:417 - [OpenClaw] PRM record file purged: /home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL-ext/poc/openclaw-rl/results/qwen3_1.7b_vllm_record_prm.jsonl
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:54] rollout.py:286 - Final collected 16 samples from rollout to train
+[36m(RolloutManager pid=9098)[0m [2026-10-11 11:17:54] rollout.py:1243 - perf 1: {'rollout/prm_eval_score': -0.3125, 'rollout/response_len/mean': 14.625, 'rollout/response_len/median': 26.0, 'rollout/response_len/max': 26, 'rollout/response_len/min': 0, 'rollout/zero_std/count_0.0': 11, 'rollout/zero_std/count_-1.0': 5, 'rollout/repetition_frac': 0.0, 'rollout/truncated_ratio': 0.0, 'perf/rollout_time': 7.763781547546387, 'perf/longest_sample_tokens_per_sec': 3.348883510023136, 'perf/longest_effective_sample_tokens_per_sec': 3.348883510023136}
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:17:54] actor.py:519 - rollout 0: {'rollout/raw_reward': 0.3125, 'rollout/log_probs': -2.426459789276123, 'rollout/rollout_log_probs': -0.01210150308907032, 'rollout/ref_log_probs': -4.092109680175781, 'rollout/advantages': 0.3125, 'rollout/returns': 0.3125}
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:17:54] timer.py:24 - Timer actor_train start
+[36m(FSDPTrainRayActor pid=9099)[0m actor_train:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:06] actor.py:754 - , kl_loss: 2.4604, kl_penalty: 2.4604
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:06] actor.py:755 - step 0: {'train/loss': 2.1478703022003174, 'train/pg_loss': -0.3125, 'train/pg_clipfrac': 0.0, 'train/ppo_kl': 0.0, 'train/entropy_loss': 0.0, 'train/train_rollout_logprob_abs_diff': 2.4248011112213135, 'train/kl_loss': 2.4603703022003174, 'train/grad_norm': 5.849790096282959, 'train/lr-pg_0': 1e-05}
+[36m(FSDPTrainRayActor pid=9099)[0m actor_train: 100%|██████████| 1/1 [00:11<00:00, 11.87s/it]actor_train: 100%|██████████| 1/1 [00:11<00:00, 11.87s/it]
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:06] timer.py:32 - Timer actor_train end (elapsed: 11.9s)
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:06] timer.py:32 - Timer train end (elapsed: 19.6s)
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:06] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:06] train_metric_utils.py:44 - perf 0: {'perf/update_weights_time': 0.6418073177337646, 'perf/train_wait_time': 192.18306589126587, 'perf/ref_log_probs_time': 4.060021162033081, 'perf/log_probs_time': 0.3029508590698242, 'perf/actor_train_time': 11.875533819198608, 'perf/train_time': 19.636017322540283, 'perf/step_time': 211.81908321380615, 'perf/wait_time_ratio': 0.9072981667911382}
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:06] timer.py:24 - Timer update_weights start
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:06] timer.py:32 - Timer update_weights end (elapsed: 0.6s)
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:06] timer.py:32 - Timer train_wait end (elapsed: 0.7s)
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:06] timer.py:24 - Timer train start
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:09] timer.py:24 - Timer ref_log_probs start
+[36m(FSDPTrainRayActor pid=9099)[0m ref_log_probs:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=9099)[0m ref_log_probs: 100%|██████████| 1/1 [00:00<00:00,  2.81it/s]ref_log_probs: 100%|██████████| 1/1 [00:00<00:00,  2.81it/s]
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:09] timer.py:32 - Timer ref_log_probs end (elapsed: 0.4s)
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:10] timer.py:24 - Timer log_probs start
+[36m(FSDPTrainRayActor pid=9099)[0m log_probs:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=9099)[0m log_probs: 100%|██████████| 1/1 [00:00<00:00,  6.40it/s]log_probs: 100%|██████████| 1/1 [00:00<00:00,  6.39it/s]
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:10] timer.py:32 - Timer log_probs end (elapsed: 0.2s)
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:10] actor.py:519 - rollout 1: {'rollout/raw_reward': -0.3125, 'rollout/log_probs': -3.0856447219848633, 'rollout/rollout_log_probs': -0.0280194990336895, 'rollout/ref_log_probs': -3.915402412414551, 'rollout/advantages': -0.3125, 'rollout/returns': -0.3125}
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:10] timer.py:24 - Timer actor_train start
+[36m(FSDPTrainRayActor pid=9099)[0m actor_train:   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:11] actor.py:754 - , kl_loss: 2.7272, kl_penalty: 2.7272
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:11] actor.py:755 - step 1: {'train/loss': 3.0397298336029053, 'train/pg_loss': 0.3125, 'train/pg_clipfrac': 0.0, 'train/ppo_kl': 0.0, 'train/entropy_loss': 0.0, 'train/train_rollout_logprob_abs_diff': 3.1049861907958984, 'train/kl_loss': 2.7272298336029053, 'train/grad_norm': 7.759519577026367, 'train/lr-pg_0': 1e-05}
+[36m(FSDPTrainRayActor pid=9099)[0m actor_train: 100%|██████████| 1/1 [00:00<00:00,  1.55it/s]actor_train: 100%|██████████| 1/1 [00:00<00:00,  1.54it/s]
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:11] timer.py:32 - Timer actor_train end (elapsed: 0.6s)
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:11] timer.py:32 - Timer train end (elapsed: 4.7s)
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:11] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=9099)[0m [2026-10-11 11:18:11] train_metric_utils.py:44 - perf 1: {'perf/update_weights_time': 0.6452019214630127, 'perf/train_wait_time': 0.6511251926422119, 'perf/ref_log_probs_time': 0.35695934295654297, 'perf/log_probs_time': 0.1575918197631836, 'perf/actor_train_time': 0.6479389667510986, 'perf/train_time': 4.691797256469727, 'perf/step_time': 5.3429224491119385, 'perf/wait_time_ratio': 0.12186686197371949}
+*** SIGTERM received at time=1791688753 on cpu 17 ***
+PC: @     0x72224fc98e51  (unknown)  (unknown)
+    @     0x72224fc45330  (unknown)  (unknown)
+    @     0x72224fc9bd6e        224  pthread_cond_timedwait
+    @     0x72224dc7728f       1184  ray::core::GetRequest::Wait()
+    @     0x72224dc793e7       1328  ray::core::CoreWorkerMemoryStore::GetImpl()
+    @     0x72224dc79e39         64  ray::core::CoreWorkerMemoryStore::Get()
+    @     0x72224dc7a03f        208  ray::core::CoreWorkerMemoryStore::Get()
+    @     0x72224db0df9a       1472  ray::core::CoreWorker::GetObjects()
+    @     0x72224db0ec80        160  ray::core::CoreWorker::Get()
+    @     0x72224da25f30        272  __pyx_pw_3ray_7_raylet_10CoreWorker_35get_objects()
+    @           0x593cd6  (unknown)  PyObject_Vectorcall
+    @     0x72224ee929e0  (unknown)  (unknown)
+[2026-10-11 11:19:13,211 E 7565 7565] logging.cc:474: *** SIGTERM received at time=1791688753 on cpu 17 ***
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474: PC: @     0x72224fc98e51  (unknown)  (unknown)
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474:     @     0x72224fc45330  (unknown)  (unknown)
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474:     @     0x72224fc9bd6e        224  pthread_cond_timedwait
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474:     @     0x72224dc7728f       1184  ray::core::GetRequest::Wait()
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474:     @     0x72224dc793e7       1328  ray::core::CoreWorkerMemoryStore::GetImpl()
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474:     @     0x72224dc79e39         64  ray::core::CoreWorkerMemoryStore::Get()
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474:     @     0x72224dc7a03f        208  ray::core::CoreWorkerMemoryStore::Get()
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474:     @     0x72224db0df9a       1472  ray::core::CoreWorker::GetObjects()
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474:     @     0x72224db0ec80        160  ray::core::CoreWorker::Get()
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474:     @     0x72224da25f30        272  __pyx_pw_3ray_7_raylet_10CoreWorker_35get_objects()
+[2026-10-11 11:19:13,213 E 7565 7565] logging.cc:474:     @           0x593cd6  (unknown)  PyObject_Vectorcall
+[2026-10-11 11:19:13,215 E 7565 7565] logging.cc:474:     @     0x72224ee929e0  (unknown)  (unknown)
+[36m(FSDPTrainRayActor pid=9099)[0m trainable params: 34,865,152 || all params: 1,755,440,128 || trainable%: 1.9861
+[36m(RolloutManager pid=9098)[0m [2m2026-10-11 03:14:21[0m [33m WARN[0m [2msmg::core::steps::worker::local::discover_metadata[0m[2m:[0m [2m/home/runner/work/sglang/sglang/src/core/steps/worker/local/discover_metadata.rs[0m[2m:[0m[2m64:[0m Endpoint '/server_info' returned 404, falling back to '/get_server_info' for backward compatibility. The '/get_server_info' endpoint is deprecated and will be removed in a future version. Please use '/server_info' instead.
+[36m(RolloutManager pid=9098)[0m [2m2026-10-11 03:14:21[0m [33m WARN[0m [2msmg::core::steps::worker::local::discover_metadata[0m[2m:[0m [2m/home/runner/work/sglang/sglang/src/core/steps/worker/local/discover_metadata.rs[0m[2m:[0m[2m64:[0m Endpoint '/model_info' returned 404, falling back to '/get_model_info' for backward compatibility. The '/get_model_info' endpoint is deprecated and will be removed in a future version. Please use '/model_info' instead.
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] submission resumed
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55050 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55060 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55084 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55098 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55106 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55120 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55136 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55146 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55150 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55156 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55172 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55178 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55192 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55196 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55208 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55212 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55218 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] drained 16 groups in 190.06s
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] submission paused
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] prm_eval_score=0.3125 (n=16)
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] submission resumed
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55230 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55240 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55246 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55258 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:55262 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:53378 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:53394 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:53398 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:53410 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:53426 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:53438 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:53440 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:53442 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m INFO:     127.0.0.1:53452 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] drained 16 groups in 7.76s
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] submission paused
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] prm_eval_score=-0.3125 (n=16)
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] submission resumed
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0
+[36m(RolloutManager pid=9098)[0m [OpenClawWorker] waiting for API-produced samples: 0/16, queue=0

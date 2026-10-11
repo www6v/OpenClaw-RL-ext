@@ -1,0 +1,81 @@
+[2026-10-11 12:27:05] arguments.py:1713 - 🚧 🚧 🚧 FSDP backend is being rewritten, please use Megatron backend for better stability. 🚧 🚧 🚧
+2026-10-11 12:27:07,290	INFO worker.py:1686 -- Using address 192.168.3.4:6380 set in the environment variable RAY_ADDRESS
+2026-10-11 12:27:07,294	INFO worker.py:1836 -- Connecting to existing Ray cluster at address: 192.168.3.4:6380...
+2026-10-11 12:27:07,354	INFO worker.py:2033 -- Connected to Ray cluster.
+[36m(RolloutManager pid=18839)[0m [2026-10-11 12:27:15] rollout.py:1180 - Launch router with args: RouterArgs(worker_urls=[], host='192.168.3.4', port=3747, mini_lb=False, pd_disaggregation=False, prefill_urls=[], decode_urls=[], policy='cache_aware', prefill_policy=None, decode_policy=None, worker_startup_timeout_secs=1800, worker_startup_check_interval=30, cache_threshold=0.3, balance_abs_threshold=10, balance_rel_threshold=1.2, eviction_interval_secs=60, max_tree_size=67108864, max_idle_secs=14400, assignment_mode='random', max_payload_size=536870912, bucket_adjust_interval_secs=5, dp_aware=False, enable_igw=False, api_key=None, log_dir=None, log_level='warn', service_discovery=False, selector={}, service_discovery_port=80, service_discovery_namespace=None, prefill_selector={}, decode_selector={}, bootstrap_port_annotation='sglang.ai/bootstrap-port', prometheus_port=5011, prometheus_host='0.0.0.0', prometheus_duration_buckets=None, request_id_headers=None, request_timeout_secs=14400, shutdown_grace_period_secs=180, max_concurrent_requests=-1, queue_size=100, queue_timeout_secs=60, rate_limit_tokens_per_second=None, cors_allowed_origins=[], retry_max_retries=5, retry_initial_backoff_ms=50, retry_max_backoff_ms=30000, retry_backoff_multiplier=1.5, retry_jitter_factor=0.2, disable_retries=False, health_failure_threshold=3, health_success_threshold=2, health_check_timeout_secs=5, health_check_interval_secs=60, health_check_endpoint='/health', disable_health_check=False, cb_failure_threshold=10, cb_success_threshold=3, cb_timeout_duration_secs=60, cb_window_duration_secs=120, disable_circuit_breaker=False, model_path=None, tokenizer_path=None, chat_template=None, tokenizer_cache_enable_l0=False, tokenizer_cache_l0_max_entries=10000, tokenizer_cache_enable_l1=False, tokenizer_cache_l1_max_memory=52428800, reasoning_parser=None, tool_call_parser=None, mcp_config_path=None, backend='sglang', history_backend='memory', oracle_wallet_path=None, oracle_tns_alias=None, oracle_connect_descriptor=None, oracle_username=None, oracle_password=None, oracle_pool_min=1, oracle_pool_max=16, oracle_pool_timeout_secs=30, postgres_db_url=None, postgres_pool_max=16, redis_url=None, redis_pool_max=16, redis_retention_days=30, client_cert_path=None, client_key_path=None, ca_cert_paths=[], server_cert_path=None, server_key_path=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', control_plane_api_keys=[], control_plane_audit_enabled=False, jwt_issuer=None, jwt_audience=None, jwt_jwks_uri=None, jwt_role_mapping={})
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:17] train_actor.py:90 - Set NUMA affinity for GPU 0
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:17] actor.py:232 - [Rank 0] Device mesh (1D): world_size=1, dp_size=1
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:17] actor.py:256 - [Rank 0] tie_word_embeddings=True, loading full model to CPU on all ranks
+[36m(FSDPTrainRayActor pid=18840)[0m Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3378.55it/s]
+[36m(RolloutManager pid=18839)[0m [2026-10-11 12:27:18] rollout.py:1191 - Router launched at 192.168.3.4:3747
+[36m(RolloutManager pid=18839)[0m [2026-10-11 12:27:18] rollout.py:73 - import openclaw_rollout.generate_rollout_openclaw as generate_rollout function.
+[36m(RolloutManager pid=18839)[0m [2026-10-11 12:27:18] rollout.py:74 - import openclaw_rollout.generate_rollout_openclaw as eval_generate_rollout function.
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:19] actor.py:1038 - FSDP MixedPrecision Policy: param_dtype=torch.bfloat16, reduce_dtype=torch.float32
+[36m(pid=19017)[0m /home/wangwei/.local/lib/python3.13/site-packages/sglang/srt/environ.py:1956: UserWarning: Environment variable SGL_DISABLE_TP_MEMORY_INBALANCE_CHECK is deprecated, please use SGLANG_DISABLE_TP_MEMORY_INBALANCE_CHECK
+[36m(pid=19017)[0m   warnings.warn(
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:22] lr_scheduler.py:80 - > learning rate decay style: constant
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:22] checkpoint.py:97 - [FSDP] No tracker file at /home/wangwei/models/Qwen3-1.7B/latest_checkpointed_iteration.txt; skipping load.
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:22] actor.py:841 - [Rank 0] Creating separate ref model from /home/wangwei/models/Qwen3-1.7B
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:22] actor.py:256 - [Rank 0] tie_word_embeddings=True, loading full model to CPU on all ranks
+[36m(FSDPTrainRayActor pid=18840)[0m Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+[36m(FSDPTrainRayActor pid=18840)[0m Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3795.26it/s]
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:23] actor.py:1038 - FSDP MixedPrecision Policy: param_dtype=torch.bfloat16, reduce_dtype=torch.float32
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:39] actor.py:858 - [Rank 0] Reference model created with FSDP2 CPUOffloadPolicy
+[36m(FSDPTrainRayActor pid=18840)[0m /home/wangwei/.local/lib/python3.13/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+[36m(FSDPTrainRayActor pid=18840)[0m   return func(*args, **kwargs)
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:39] timer.py:24 - Timer train_wait start
+[36m(FSDPTrainRayActor pid=18840)[0m trainable params: 34,865,152 || all params: 1,755,440,128 || trainable%: 1.9861
+[36m(RolloutManager pid=18839)[0m [2m2026-10-11 04:27:26[0m [33m WARN[0m [2msmg::core::steps::worker::local::discover_metadata[0m[2m:[0m [2m/home/runner/work/sglang/sglang/src/core/steps/worker/local/discover_metadata.rs[0m[2m:[0m[2m64:[0m Endpoint '/server_info' returned 404, falling back to '/get_server_info' for backward compatibility. The '/get_server_info' endpoint is deprecated and will be removed in a future version. Please use '/server_info' instead.
+[36m(RolloutManager pid=18839)[0m [2m2026-10-11 04:27:26[0m [33m WARN[0m [2msmg::core::steps::worker::local::discover_metadata[0m[2m:[0m [2m/home/runner/work/sglang/sglang/src/core/steps/worker/local/discover_metadata.rs[0m[2m:[0m[2m64:[0m Endpoint '/model_info' returned 404, falling back to '/get_model_info' for backward compatibility. The '/get_model_info' endpoint is deprecated and will be removed in a future version. Please use '/model_info' instead.
+Traceback (most recent call last):
+  File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/slime/train_async.py", line 166, in <module>
+    train(args)
+    ~~~~~^^^^^^
+  File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/slime/train_async.py", line 89, in train
+    actor_model.update_weights()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/slime/slime/ray/actor_group.py", line 134, in update_weights
+    return ray.get([actor.update_weights.remote() for actor in self._actor_handlers])
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/_private/client_mode_hook.py", line 134, in wrapper
+    return func(*args, **kwargs)
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/_private/worker.py", line 3004, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ~~~~~~~~~~~~~~~~~~^
+        object_refs, timeout, use_object_store=_use_object_store
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/wangwei/.local/lib/python3.13/site-packages/ray/_private/worker.py", line 1053, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(TypeError): [36mray::FSDPTrainRayActor.update_weights()[39m (pid=18840, ip=192.168.3.4, actor_id=85bf58e3fd301b3a673e345d03000000, repr=<slime.backends.fsdp_utils.actor.FSDPTrainRayActor object at 0x7ccca8795400>)
+  File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/slime/slime/utils/timer.py", line 78, in wrapper
+    return func(*args, **kwargs)
+  File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/slime/slime/backends/fsdp_utils/actor.py", line 797, in update_weights
+    self.weight_updater.connect_rollout_engines(rollout_engines, rollout_engine_lock)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/slime/slime/backends/fsdp_utils/update_weight_utils.py", line 218, in connect_rollout_engines
+    self._model_update_groups = init_process_group(
+                                ~~~~~~~~~~~~~~~~~~^
+        backend="nccl",
+        ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        group_name=self._group_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/wangwei/wei/workspacePy/agentic-rl/OpenClaw-RL/slime/slime/utils/distributed_utils.py", line 78, in init_process_group
+    pg, _ = _new_process_group_helper(
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        world_size,
+        ^^^^^^^^^^^
+    ...<6 lines>...
+        timeout=timeout,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: _new_process_group_helper() got an unexpected keyword argument 'pg_options'
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:39] timer.py:24 - Timer update_weights start
+[36m(FSDPTrainRayActor pid=18840)[0m [2026-10-11 12:27:39] timer.py:32 - Timer update_weights end (elapsed: 0.0s)
